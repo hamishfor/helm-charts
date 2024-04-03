@@ -92,4 +92,35 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/deluge-2.1.1-a000/deluge-2.1.1-a000.tgz
     version: 2.1.1-a000
-generated: "2024-04-03T21:52:09.465668793Z"
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.1.1-r8-ls262
+    created: "2024-04-03T21:54:09.959479104Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Deluge is a torrent download client
+    digest: 32ebcb6dc1bb695c4f8580cff02ac87dd23510f3d8b606e9dc49c342438b44ca
+    home: https://github.com/hamishfor/helm-charts/tree/main/charts/deluge
+    icon: https://avatars2.githubusercontent.com/u/6733935?v=3&s=200
+    keywords:
+    - deluge
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mark@markmcw.uk
+      name: mcmarkj
+    - email: hamishfor@gmail.com
+      name: hamishfor
+    name: deluge
+    sources:
+    - https://hub.docker.com/r/linuxserver/deluge/
+    - https://deluge-torrent.org/
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/deluge-2.1.1-a000/deluge-2.1.1-a000.tgz
+    version: 2.1.1-a000
+generated: "2024-04-03T21:54:09.95949312Z"
