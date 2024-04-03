@@ -11,7 +11,7 @@ image:
   # -- image pull policy
   pullPolicy: IfNotPresent
   # -- image tag
-  tag: version-2.0.3-2201906121747ubuntu18.04.1
+  tag: 2.1.1-r8-ls262
 
 # -- environment variables. See more environment variables in the [deluge documentation](https://github.com/linuxserver/docker-deluge#parameters).
 # @default -- See below
