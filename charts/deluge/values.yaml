@@ -27,14 +27,26 @@ env:
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
+# service:
+#   web:
+#     ports:
+#       http:
+#         port: 8112
+#   daemon:
+#     ports:
+#       http:
+#         port: 58846
+
 service:
-  web:
+  main:
     ports:
-      http:
+      web:
+        enabled: true
+        protocol: TCP
         port: 8112
-  daemon:
-    ports:
-      http:
+      daemon:
+        enabled: true
+        protocol: TCP
         port: 58846
 
 ingress:
