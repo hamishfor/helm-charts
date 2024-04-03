@@ -42,7 +42,7 @@ service:
     ports:
       web:
         enabled: true
-        protocol: TCP
+        protocol: HTTP
         port: 8112
       daemon:
         enabled: true
