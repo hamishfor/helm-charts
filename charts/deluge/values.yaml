@@ -31,7 +31,7 @@ env:
 service:
   main:
     ports:
-      http:
+      web:
         enabled: true
         protocol: HTTP
         port: 8112
