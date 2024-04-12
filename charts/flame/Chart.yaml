@@ -1,0 +1,27 @@
+---
+apiVersion: v2
+appVersion: 2.3.1
+description: Flame is a self-hosted startpage
+name: flame
+version: 0.0.1
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - flame
+  - dashboard
+  - startpage
+home: https://github.com/hamishfor/helm-charts/tree/main/charts/flame
+icon: https://avatars.githubusercontent.com/u/24780509?v=4
+sources:
+  - https://hub.docker.com/r/pawelmalak/flame
+  - https://github.com/pawelmalak/flame
+maintainers:
+  - name: hamishfor
+    email: hamishfor@gmail.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.5.2
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
