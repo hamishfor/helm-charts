@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 2.3.1
 description: Flame is a self-hosted startpage
 name: flame
-version: 0.0.1
+version: 0.0.2
 kubeVersion: ">=1.16.0-0"
 keywords:
   - flame
