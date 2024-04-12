@@ -316,6 +316,36 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 2.3.1
+    created: "2024-04-12T21:14:59.373438808Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Flame is a self-hosted startpage
+    digest: ba3e73dadc245d71998b8cb2098080995f70930c4a00175662e02f17893b915f
+    home: https://github.com/hamishfor/helm-charts/tree/main/charts/flame
+    icon: https://avatars.githubusercontent.com/u/24780509?v=4
+    keywords:
+    - flame
+    - dashboard
+    - startpage
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: hamishfor@gmail.com
+      name: hamishfor
+    name: flame
+    sources:
+    - https://hub.docker.com/r/pawelmalak/flame
+    - https://github.com/pawelmalak/flame
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/flame-0.0.2/flame-0.0.2.tgz
+    version: 0.0.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.3.1
     created: "2024-04-12T20:49:04.674315893Z"
     dependencies:
     - name: common
@@ -340,4 +370,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/flame-0.0.1/flame-0.0.1.tgz
     version: 0.0.1
-generated: "2024-04-12T20:49:04.674353443Z"
+generated: "2024-04-12T21:14:59.373473873Z"
