@@ -309,4 +309,35 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/deluge-2.1.1-a000/deluge-2.1.1-a000.tgz
     version: 2.1.1-a000
-generated: "2024-04-04T07:42:53.160988153Z"
+  flame:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.3.1
+    created: "2024-04-12T20:49:04.674315893Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Flame is a self-hosted startpage
+    digest: 26c078388afea01503a1d5e8db4525480fae0a43debb7ed644803a826e1dc4ef
+    home: https://github.com/hamishfor/helm-charts/tree/main/charts/flame
+    icon: https://avatars.githubusercontent.com/u/24780509?v=4
+    keywords:
+    - flame
+    - dashboard
+    - startpage
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: hamishfor@gmail.com
+      name: hamishfor
+    name: flame
+    sources:
+    - https://hub.docker.com/r/pawelmalak/flame
+    - https://github.com/pawelmalak/flame
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/flame-0.0.1/flame-0.0.1.tgz
+    version: 0.0.1
+generated: "2024-04-12T20:49:04.674353443Z"
