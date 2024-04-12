@@ -32,19 +32,12 @@ env:
   PASSWORD: password
 
 # -- Configures service settings for the chart.
-# @default -- See values.yaml
-
+# @default -- See [values.yaml](./values.yaml)
 service:
   main:
     ports:
       http:
-        enabled: true
-        protocol: HTTP
-        port: 80
-      https:
-        enabled: true
-        protocol: TCP
-        port: 443
+        port: 5005
 
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
