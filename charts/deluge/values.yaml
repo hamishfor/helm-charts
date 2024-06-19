@@ -85,9 +85,3 @@ ingress:
       - secretName: deluge-tls
         hosts:
           - deluge.hamishandholly.com
-
-service:
-  main:
-    ports:
-      http:
-        enabled: false

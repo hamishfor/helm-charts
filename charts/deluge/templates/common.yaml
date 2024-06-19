@@ -12,6 +12,12 @@ probes:
   startup:
     enabled: false
 
+service:
+  main:
+    ports:
+      https:
+        port: 8112
+
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "deluge.harcodedValues" . | fromYaml) -}}
 
