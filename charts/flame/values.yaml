@@ -2,52 +2,87 @@
 # IMPORTANT NOTE
 #
 # This chart inherits from our common library chart. You can check the default values/options here:
-# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+# https://github.com/geek-cookbook/library-charts/tree/main/charts/stable/common/values.yaml
 #
-
-global:
-  annotations:
-    - flame.pawelmalak/type=application # "app" works too
-    - flame.pawelmalak/name=Flame
-    - flame.pawelmalak/url=https://flame.example.com
-    - flame.pawelmalak/icon=kubernetes # optional, default is "kubernetes"
 
 image:
   # -- image repository
   repository: pawelmalak/flame
+  # @default -- chart.appVersion
+  tag: latest
   # -- image pull policy
   pullPolicy: IfNotPresent
-  # -- image tag
-  tag: 2.3.1
 
-# -- environment variables. See more environment variables in the [deluge documentation](https://github.com/pawelmalak/flame/wiki).
+# -- environment variables.
 # @default -- See below
 env:
-  # -- Specify the user ID the application will run as
-  PUID: "1000"
-  # -- Specify the group ID the application will run as
-  PGID: "1000"
   # -- Set the container timezone
-  TZ: "Europe/London"
+  TZ: "Pacific/Auckland"
+  PUID: 1000
+  GUID: 1000
   PASSWORD: password
 
 # -- Configures service settings for the chart.
-# @default -- See [values.yaml](./values.yaml)
+# @default -- See values.yaml
 service:
   main:
     ports:
       http:
         port: 5005
+        protocol: TCP
+        targetport: http
+      https:
+        port: 5006
+        protocol: TCP
+        targetport: https
 
 ingress:
-  # -- Enable and configure ingress settings for the chart under this key.
-  # @default -- See values.yaml
   main:
-    enabled: false
+    # -- Enables or disables the ingress
+    enabled: true
+
+    # -- Make this the primary ingress (used in probes, notes, etc...).
+    # If there is more than 1 ingress, make sure that only 1 ingress is marked as primary.
+    primary: true
+
+    # -- Override the name suffix that is used for this ingress.
+    nameOverride:
+
+    # -- Provide additional annotations which may be required.
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-production"
+      kubernetes.io/tls-acme: "true"
+
+    # -- Provide additional labels which may be required.
+    labels: {}
+
+    # -- Set the ingressClass that is used for this ingress.
+    # Requires Kubernetes >=1.19
+    ingressClassName: nginx
+
+    ## Configure the hosts for the ingress
+    hosts:
+      - # -- Host address. Helm template can be passed.
+        host: flame.hamishandholly.com
+        ## Configure the paths for the host
+        paths:
+          - # -- Path.  Helm template can be passed.
+            path: /
+            # -- Ignored if not kubeVersion >= 1.14-0
+            pathType: Prefix
+
+    # -- Configure TLS for the ingress. Both secretName and hosts can process a Helm template.
+    tls:
+      - secretName: flame-tls
+        hosts:
+          - flame.hamishandholly.com
 
 # -- Configure persistence settings for the chart under this key.
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
+    type: hostPath
+    hostPath: /lake/data/config/flame/
+    accessMode: ReadWriteMany
     mountPath: /config
