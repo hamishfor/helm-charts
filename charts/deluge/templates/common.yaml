@@ -17,7 +17,7 @@ service:
     ports:
       http:
         port: 80
-        protocol: tcp
+        protocol: TCP
         targetport: http
 
 {{- end -}}
