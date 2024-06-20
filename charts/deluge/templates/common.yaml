@@ -15,8 +15,10 @@ probes:
 service:
   main:
     ports:
-      https:
-        port: 8112
+      http:
+        port: 80
+        protocol: tcp
+        targetport: http
 
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "deluge.harcodedValues" . | fromYaml) -}}
