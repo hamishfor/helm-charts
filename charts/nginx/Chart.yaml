@@ -1,6 +1,6 @@
 apiVersion: v2
-name: my-nginx-wrapper
-description: A Helm chart for Kubernetes
+name: nginx
+description: nginx ingress
 
 type: application
 version: 0.1.0
