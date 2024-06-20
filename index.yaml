@@ -370,4 +370,19 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/flame-0.0.1/flame-0.0.1.tgz
     version: 0.0.1
-generated: "2024-04-12T21:14:59.373473873Z"
+  my-nginx-wrapper:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-06-20T10:08:20.415972291Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.7.1
+    description: A Helm chart for Kubernetes
+    digest: 1e69601975fee4bda333e711153767e1f60ad5bec5ca067ef3eed00047eae3fc
+    name: my-nginx-wrapper
+    type: application
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/my-nginx-wrapper-0.1.0/my-nginx-wrapper-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-06-20T10:08:20.416020101Z"
