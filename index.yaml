@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  bitwarden:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-06-24T11:37:12.519032181Z"
+    dependencies:
+    - name: self-host
+      repository: https://charts.bitwarden.com
+      version: 2024.6.0
+    description: bitwarden self hosted
+    digest: 055c380a5a577ea670aee6eb8e703ac0f81e328caafb9193eea6b43b96b3da54
+    name: bitwarden
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/bitwarden-0.1.0/bitwarden-0.1.0.tgz
+    version: 0.1.0
   deluge:
   - annotations:
       artifacthub.io/changes: |-
@@ -400,4 +414,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-20T10:11:22.361144991Z"
+generated: "2024-06-24T11:37:12.604905788Z"
