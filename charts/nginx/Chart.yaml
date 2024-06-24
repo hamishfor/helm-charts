@@ -3,10 +3,10 @@ name: nginx
 description: nginx ingress
 
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "1.0"
 
 dependencies:
   - name: ingress-nginx
-    version: "4.7.1"
+    version: "4.10.1"
     repository: "https://kubernetes.github.io/ingress-nginx"
