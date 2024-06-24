@@ -1,0 +1,10 @@
+apiVersion: v2
+name: bitwarden
+description: bitwarden self hosted
+version: 0.1.0
+appVersion: 1.0
+
+dependencies:
+  - name: bitwarden
+    version: 2024.6.0
+    repository: "https://charts.bitwarden.com"
