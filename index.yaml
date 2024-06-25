@@ -402,6 +402,20 @@ entries:
   nginx:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2024-06-25T07:50:57.523596571Z"
+    dependencies:
+    - name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.10.1
+    description: nginx ingress
+    digest: 1cc09dd3c847f914e48aacb96035830f0053edc715c1b11ac144a9d26e7c803c
+    name: nginx
+    type: application
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/nginx-0.1.1/nginx-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2024-06-20T10:11:22.361011873Z"
     dependencies:
     - name: ingress-nginx
@@ -414,4 +428,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-24T11:37:12.604905788Z"
+generated: "2024-06-25T07:50:57.523646765Z"
