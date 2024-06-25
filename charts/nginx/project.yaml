@@ -8,13 +8,21 @@ spec:
     namespace: ingress
     server: "https://kubernetes.default.svc"
   source:
-    path: charts/nginx
-    repoURL: "git@github.com:hamishfor/helm-charts.git"
-    targetRevision: HEAD
+    path: .
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    targetRevision: "4.10.1"
     helm:
       valueFiles:
-        - values.yaml
-  sources: []
+        - $values/charts/nginx/values.yaml
+  sources:
+    - repoURL: "git@github.com:hamishfor/helm-values.git"
+      targetRevision: HEAD
+      ref: values
+    - repoURL: https://kubernetes.github.io/ingress-nginx
+      targetRevision: "4.10.1"
+      helm:
+        valueFiles:
+          - $values/charts/nginx/values.yaml
   project: default
   syncPolicy:
     automated:
