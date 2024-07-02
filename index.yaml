@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  applications:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-02T11:21:15.885061613Z"
+    description: Applications
+    digest: 1eb777ad6f9b8fcf316eb48ab04b7be88b54910d3c4e8f67f6a9b87e02aa506b
+    name: applications
+    type: application
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/applications-0.1.0/applications-0.1.0.tgz
+    version: 0.1.0
   bitwarden:
   - apiVersion: v2
     appVersion: 1.0.0
@@ -428,4 +439,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-25T07:50:57.523646765Z"
+generated: "2024-07-02T11:21:16.033490084Z"
