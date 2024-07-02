@@ -11,8 +11,8 @@ spec:
     namespace: ingress
     server: {{ .Values.spec.destination.server }}
   sources:
-    - repoURL: {{ .Values.spec.source.repoURL }}
-      targetRevision: {{ .Values.spec.source.targetRevision }}
+    - repoURL: {{ .Values.spec.sources.repoURL }}
+      targetRevision: {{ .Values.spec.sources.targetRevision }}
       ref: values
     - repoURL: https://kubernetes.github.io/ingress-nginx
       targetRevision: "4.10.1"
