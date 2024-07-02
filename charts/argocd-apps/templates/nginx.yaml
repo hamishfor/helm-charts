@@ -2,24 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: nginx
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: ""
     namespace: ingress
-    server: "https://kubernetes.default.svc"
-  source:
-    path: .
-    repoURL: https://kubernetes.github.io/ingress-nginx
-    targetRevision: "4.10.1"
-    helm:
-      valueFiles:
-        - $values/charts/nginx/values.yaml
+    server: {{ .Values.spec.destination.server }}
   sources:
-    - repoURL: "git@github.com:hamishfor/helm-values.git"
-      targetRevision: HEAD
+    - repoURL: {{ .Values.spec.source.repoURL }}
+      targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: values
     - repoURL: https://kubernetes.github.io/ingress-nginx
       targetRevision: "4.10.1"
+      chart: ingress-nginx
       helm:
         valueFiles:
           - $values/charts/nginx/values.yaml
