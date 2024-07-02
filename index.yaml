@@ -3,6 +3,16 @@ entries:
   applications:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2024-07-02T11:57:16.443909879Z"
+    description: Applications
+    digest: f4b9f7090c3a5ff9609a152f8d0426cee78a493ad1009f9775d171f955606a6d
+    name: applications
+    type: application
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/applications-0.1.1/applications-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2024-07-02T11:21:15.885061613Z"
     description: Applications
     digest: 1eb777ad6f9b8fcf316eb48ab04b7be88b54910d3c4e8f67f6a9b87e02aa506b
@@ -439,4 +449,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/nginx-0.1.0/nginx-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-02T11:21:16.033490084Z"
+generated: "2024-07-02T11:57:16.443948852Z"
