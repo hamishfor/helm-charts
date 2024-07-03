@@ -22,6 +22,7 @@ jobs:
           for dir in $(ls -1 charts/); do
             pushd charts/$dir;
             if [ -f kubeconform-values.yaml ]; then
+              echo "using kubeconform-values.yaml"
               helm kubeconform -f kubeconform-values.yaml --verbose --summary .;
             else
               helm kubeconform --verbose --summary .;
