@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/halkeye/helm-charts.git"
+    "url": "git+https://github.com/hamishfor/helm-charts.git"
   },
   "keywords": [],
-  "author": "Gavin Mogan <npm@gavinmogan.com> (https://www.gavinmogan.com/)",
+  "author": "hamishfor <npm@hamish.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/halkeye/helm-charts/issues"
+    "url": "https://github.com/hamishfor/helm-charts/issues"
   },
   "homepage": "https://github.com/hamishfor/helm-charts#readme",
   "devDependencies": {

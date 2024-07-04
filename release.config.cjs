@@ -3,7 +3,7 @@ const Handlebars = require('handlebars')
 
 Handlebars.registerHelper("yamlString", function (options) {
   const input = options.fn(this).trim()
-  return yaml.dump(input.replace(/^\s*\*\s*/g, '').trim(), {lineWith: 999, forceQuotes: true, quotingType: '"'});
+  return yaml.dump(input.replace(/^\s*\*\s*/g, '').trim(), { lineWith: 999, forceQuotes: true, quotingType: '"' });
 });
 
 /*
@@ -41,7 +41,7 @@ module.exports = {
       "@semantic-release/exec",
       {
         "prepareCmd": "helm-docs",
-        "publishCmd": "cr package . && cr upload -o halkeye -r helm-charts -c $(git rev-parse HEAD) --release-notes-file CHANGELOG.md --push --packages-with-index --skip-existing"
+        "publishCmd": "cr package . && cr upload -o hamishfor -r helm-charts -c $(git rev-parse HEAD) --release-notes-file CHANGELOG.md --push --packages-with-index --skip-existing"
       }
     ],
     [
