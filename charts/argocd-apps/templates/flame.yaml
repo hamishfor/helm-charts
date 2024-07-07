@@ -1,25 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
 kind: application
 metadata:
-  name: deluge
+  name: flame
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     name: ""
-    namespace: deluge
+    namespace: flame
     server: {{ .Values.spec.destination.server }}
   sources:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: "5.4.6"
-      chart: deluge
+      targetRevision: "0.0.2"
+      chart: flame
       helm:
         valueFiles:
-          - $values/charts/deluge/values.yaml
+          - $values/charts/flame/values.yaml
   project: default
   syncPolicy:
     automated:
