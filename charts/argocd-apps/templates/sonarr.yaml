@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: application
+metadata:
+  name: sonarr
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: ""
+    namespace: sonarr
+    server: {{ .Values.spec.destination.server }}
+  sources:
+    - repoURL: {{ .Values.spec.source.repoURL }}
+      targetRevision: {{ .Values.spec.source.targetRevision }}
+      ref: {{ .Values.spec.source.ref }}
+    - repoURL: https://geek-cookbook.github.io/charts/
+      targetRevision: "sonarr-16.3.2"
+      chart: sonarr
+      helm:
+        valueFiles:
+          - $values/charts/sonarr/values.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
