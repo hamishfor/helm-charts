@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 2.3.1
 description: Flame is a self-hosted startpage
 name: flame
-version: 0.0.2
+version: 1.0.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - flame
@@ -22,6 +22,8 @@ dependencies:
     repository: https://library-charts.k8s-at-home.com
     version: 4.5.2
 annotations:
-  artifacthub.io/changes: |-
-    - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.2
+  artifacthub.io/changes: |2
+     - "hardcoded values template ([ce58599](https://github.com/hamishfor/helm-charts/commit/ce58599860e2cf276d26994cf5fe036aee6a4f3c))"
+     - "web = http ([158f8c3](https://github.com/hamishfor/helm-charts/commit/158f8c31b3f3ecbaaa7ab2fd54e8432b0d352259))"
+     - "flame ([58d6842](https://github.com/hamishfor/helm-charts/commit/58d6842c908bef49f798e3e0179bc76f766e6e42))"
+     - "sonarr ([210cb08](https://github.com/hamishfor/helm-charts/commit/210cb08ae735217a1fbd09dcc988a32a562dc580))"
