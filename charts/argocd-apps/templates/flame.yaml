@@ -15,7 +15,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: "0.0.2"
+      targetRevision: "1.0.0"
       chart: flame
       helm:
         valueFiles:

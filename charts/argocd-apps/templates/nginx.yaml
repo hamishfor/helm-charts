@@ -13,7 +13,7 @@ spec:
   sources:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
-      ref: values
+      ref: {{ .Values.spec.source.ref }}
     - repoURL: https://kubernetes.github.io/ingress-nginx
       targetRevision: "4.10.1"
       chart: ingress-nginx
