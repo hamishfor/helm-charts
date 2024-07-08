@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-08T10:05:47.497457365Z"
+    description: Applications
+    digest: a1eb975ab3995ed4a5f8cbc78c642b3bed6c9ecde8f2029e1a82881a835ffce1
+    name: applications
+    type: application
+    urls:
+    - applications-1.4.0.tgz
+    version: 1.4.0
+  - annotations:
+      artifacthub.io/changes: |2
          - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
     apiVersion: v2
     appVersion: "1.0"
@@ -27,4 +40,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-07T11:37:58.922333418Z"
+generated: "2024-07-08T10:05:47.497474768Z"
