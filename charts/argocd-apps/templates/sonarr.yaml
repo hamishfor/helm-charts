@@ -7,6 +7,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
+    name: "sonarr"
     namespace: sonarr
     server: {{ .Values.spec.destination.server }}
   sources:
