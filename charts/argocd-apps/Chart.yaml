@@ -28,5 +28,6 @@ annotations:
      - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
      - "actions CR_TOKEN ([9cbc713](https://github.com/hamishfor/helm-charts/commit/9cbc713d814f67f95f72901a3540ecc8eb1d9df8))"
      - "deluge -name ([a42b0b9](https://github.com/hamishfor/helm-charts/commit/a42b0b90a55bb0abc1d704babbab8fd7eef227f3))"
+     - "plex ([aeee8d6](https://github.com/hamishfor/helm-charts/commit/aeee8d6077fdb7b37fc1739b9ef4b964d7823ba0))"
      - "radarr -name ([2b1ad92](https://github.com/hamishfor/helm-charts/commit/2b1ad92f0e2b3936beccabb9e0d0724bfc861bc0))"
      - "sonarr -name ([c97f447](https://github.com/hamishfor/helm-charts/commit/c97f44740929e03c315f3ff9526b312f0c5a94cb))"
