@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nzbget
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: nzbget
+    server: {{ .Values.spec.destination.server }}
+  sources:
+    - repoURL: {{ .Values.spec.source.repoURL }}
+      targetRevision: {{ .Values.spec.source.targetRevision }}
+      ref: {{ .Values.spec.source.ref }}
+    - repoURL: https://geek-cookbook.github.io/charts/
+      targetRevision: "nzbget-6.4.3"
+      chart: nzbget
+      helm:
+        valueFiles:
+          - $values/charts/nzbget/values.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
