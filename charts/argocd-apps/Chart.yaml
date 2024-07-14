@@ -24,4 +24,3 @@ appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
      - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
-     - "-name ([3b3c695](https://github.com/hamishfor/helm-charts/commit/3b3c6956ac30cc3f1f3213184817a1662f77c144))"
