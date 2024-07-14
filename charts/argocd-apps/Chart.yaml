@@ -23,7 +23,10 @@ version: 1.4.0
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
+     - "ghtoken ([66ba73f](https://github.com/hamishfor/helm-charts/commit/66ba73f8eeeaf76b8a6efbbd0695934bf334906a))"
+     - "nginx destination naem ([f518cb9](https://github.com/hamishfor/helm-charts/commit/f518cb9a183dbf9f63f59988f0d3359814b2eb5a))"
      - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
+     - "actions CR_TOKEN ([9cbc713](https://github.com/hamishfor/helm-charts/commit/9cbc713d814f67f95f72901a3540ecc8eb1d9df8))"
      - "deluge -name ([a42b0b9](https://github.com/hamishfor/helm-charts/commit/a42b0b90a55bb0abc1d704babbab8fd7eef227f3))"
      - "radarr -name ([2b1ad92](https://github.com/hamishfor/helm-charts/commit/2b1ad92f0e2b3936beccabb9e0d0724bfc861bc0))"
      - "sonarr -name ([c97f447](https://github.com/hamishfor/helm-charts/commit/c97f44740929e03c315f3ff9526b312f0c5a94cb))"
