@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "nzbget ([6408f59](https://github.com/hamishfor/helm-charts/commit/6408f5999b6b5618dc7ddb6b2c593c2f48a3eaa2))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-14T12:13:25.565107538Z"
+    description: Applications
+    digest: f6276b51d488a9cfc2fb596f4ee62d218c576d2f82e2e00621b6cc97515c59fe
+    name: applications
+    type: application
+    urls:
+    - applications-1.5.0.tgz
+    version: 1.5.0
+  - annotations:
+      artifacthub.io/changes: |2
          - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
     apiVersion: v2
     appVersion: "1.0"
@@ -40,4 +53,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-08T10:05:47.497474768Z"
+generated: "2024-07-14T12:13:25.565130761Z"
