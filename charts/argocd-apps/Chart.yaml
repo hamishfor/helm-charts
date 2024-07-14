@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.3.0
+version: 1.4.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,4 +23,5 @@ version: 1.3.0
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
+     - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
+     - "-name ([3b3c695](https://github.com/hamishfor/helm-charts/commit/3b3c6956ac30cc3f1f3213184817a1662f77c144))"
