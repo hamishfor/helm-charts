@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "docker-registry ([1e28ef1](https://github.com/hamishfor/helm-charts/commit/1e28ef15811fc14d7aa272cdf72bc14c371317e9))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T00:01:57.348114415Z"
+    description: Applications
+    digest: 18d18ed43b870fecf242dd209e00bd1853976d2d3ce4d97e34554193a788e704
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.0.tgz
+    version: 1.6.0
+  - annotations:
+      artifacthub.io/changes: |2
          - "nzbget ([6408f59](https://github.com/hamishfor/helm-charts/commit/6408f5999b6b5618dc7ddb6b2c593c2f48a3eaa2))"
     apiVersion: v2
     appVersion: "1.0"
@@ -53,4 +66,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-14T12:13:25.565130761Z"
+generated: "2024-07-15T00:01:57.348137629Z"
