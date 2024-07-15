@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://geek-cookbook.github.io/charts/
-      targetRevision: "sonarr-16.3.2"
+      targetRevision: "16.3.2"
       chart: sonarr
       helm:
         valueFiles:

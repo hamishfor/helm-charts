@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://geek-cookbook.github.io/charts/
-      targetRevision: "nzbget-6.4.3"
+      targetRevision: "6.4.3"
       chart: nzbget
       helm:
         valueFiles:
