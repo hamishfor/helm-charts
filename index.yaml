@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "nzbget version ([f2c05b4](https://github.com/hamishfor/helm-charts/commit/f2c05b4e83b2a47cee10a9150efc2f2e342c430e))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T01:41:04.265066365Z"
+    description: Applications
+    digest: be9268bc162c14042b1040cad23d41a22f6aec2babfc049850882e793936ffd1
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.6.tgz
+    version: 1.6.6
+  - annotations:
+      artifacthub.io/changes: |2
          - "improper constraint \"app-x.x.x\" ([e73f9d2](https://github.com/hamishfor/helm-charts/commit/e73f9d28823e585b69b84bc43e18138bc8dfb987))"
     apiVersion: v2
     appVersion: "1.0"
@@ -131,4 +144,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T01:37:40.494135143Z"
+generated: "2024-07-15T01:41:04.265105248Z"
