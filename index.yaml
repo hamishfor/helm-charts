@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "improper constraint \"app-x.x.x\" ([e73f9d2](https://github.com/hamishfor/helm-charts/commit/e73f9d28823e585b69b84bc43e18138bc8dfb987))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T01:37:40.494096171Z"
+    description: Applications
+    digest: 13882b790de69c9cf76318c86a91a99ade2eea69b7cdd37b544e05c60eafd684
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.5.tgz
+    version: 1.6.5
+  - annotations:
+      artifacthub.io/changes: |2
          - "all values->Values ([3c63014](https://github.com/hamishfor/helm-charts/commit/3c63014ac6b61b038f934ea1cdc80b756a5a58b9))"
     apiVersion: v2
     appVersion: "1.0"
@@ -118,4 +131,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T01:33:17.31182872Z"
+generated: "2024-07-15T01:37:40.494135143Z"
