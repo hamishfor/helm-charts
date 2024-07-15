@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://helm.twun.io/
-      targetRevision: "latest"
+      targetRevision: "v2.2.3"
       chart: docker-registry
       helm:
         valueFiles:
