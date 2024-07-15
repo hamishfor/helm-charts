@@ -18,7 +18,7 @@ spec:
       chart: docker-registry
       helm:
         valueFiles:
-          - $values_repo/charts/docker-registry/values.yaml
+          - $values_repo/charts/docker-registry/values.yml
   project: default
   syncPolicy:
     automated:

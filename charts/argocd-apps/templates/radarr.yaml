@@ -18,7 +18,7 @@ spec:
       chart: radarr
       helm:
         valueFiles:
-          - $values_repo/charts/radarr/values.yaml
+          - $values_repo/charts/radarr/values.yml
   project: default
   syncPolicy:
     automated:
