@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.6.0
+version: 1.6.1
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,4 +23,4 @@ version: 1.6.0
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "docker-registry ([1e28ef1](https://github.com/hamishfor/helm-charts/commit/1e28ef15811fc14d7aa272cdf72bc14c371317e9))"
+     - "deluge indenting ([67706d2](https://github.com/hamishfor/helm-charts/commit/67706d2806425a907a69b02e7d0eae0816daa384))"
