@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "deluge indenting ([67706d2](https://github.com/hamishfor/helm-charts/commit/67706d2806425a907a69b02e7d0eae0816daa384))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T01:20:03.092051936Z"
+    description: Applications
+    digest: 825d1949f2f5d47d565d1300034cb8f347ddc583ba8882e85f066495cd5f4666
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.1.tgz
+    version: 1.6.1
+  - annotations:
+      artifacthub.io/changes: |2
          - "docker-registry ([1e28ef1](https://github.com/hamishfor/helm-charts/commit/1e28ef15811fc14d7aa272cdf72bc14c371317e9))"
     apiVersion: v2
     appVersion: "1.0"
@@ -66,4 +79,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T00:01:57.348137629Z"
+generated: "2024-07-15T01:20:03.092080359Z"
