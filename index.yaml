@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "values.yaml -> values.yml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T02:14:11.038490031Z"
+    description: Applications
+    digest: 50bacaa3802bb29599e7075f6373e5683febf5cc5918fcb33e3f52da7dd5412a
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.9.tgz
+    version: 1.6.9
+  - annotations:
+      artifacthub.io/changes: |2
          - "values repo revision ([1b49259](https://github.com/hamishfor/helm-charts/commit/1b492595280bc339815c9c35961bf01b505f9c17))"
     apiVersion: v2
     appVersion: "1.0"
@@ -170,4 +183,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T01:56:25.11819814Z"
+generated: "2024-07-15T02:14:11.03859074Z"
