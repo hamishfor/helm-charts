@@ -18,7 +18,7 @@ spec:
       chart: deluge
       helm:
         valueFiles:
-          - $Values/charts/deluge/values.yaml
+          - $values_repo/charts/deluge/values.yaml
   project: default
   syncPolicy:
     automated:

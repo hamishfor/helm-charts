@@ -18,7 +18,7 @@ spec:
       chart: nzbget
       helm:
         valueFiles:
-          - $Values/charts/nzbget/values.yaml
+          - $values_repo/charts/nzbget/values.yaml
   project: default
   syncPolicy:
     automated:
