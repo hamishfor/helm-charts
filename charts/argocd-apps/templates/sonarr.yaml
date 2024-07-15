@@ -18,7 +18,7 @@ spec:
       chart: sonarr
       helm:
         valueFiles:
-          - $values/charts/sonarr/values.yaml
+          - $Values/charts/sonarr/values.yaml
   project: default
   syncPolicy:
     automated:

@@ -18,7 +18,7 @@ spec:
       chart: plex
       helm:
         valueFiles:
-          - $values/charts/plex/values.yaml
+          - $Values/charts/plex/values.yaml
   project: default
   syncPolicy:
     automated:

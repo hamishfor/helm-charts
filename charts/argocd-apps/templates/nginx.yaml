@@ -18,7 +18,7 @@ spec:
       chart: ingress-nginx
       helm:
         valueFiles:
-          - $values/charts/nginx/values.yaml
+          - $Values/charts/nginx/values.yaml
   project: default
   syncPolicy:
     automated:
