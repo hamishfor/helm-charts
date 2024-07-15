@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "docker-registry values->Values ([5345bfe](https://github.com/hamishfor/helm-charts/commit/5345bfebf921de1021479f8afbe8e8beaca3b494))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T01:29:42.405281644Z"
+    description: Applications
+    digest: 9a84790ab8d22f80d2082ae8b0ef319a839094927c357ec14ee8ca8a6db72a36
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.3.tgz
+    version: 1.6.3
+  - annotations:
+      artifacthub.io/changes: |2
          - "docker-registry chart version ([6c268fe](https://github.com/hamishfor/helm-charts/commit/6c268fe5cd637999756917f46ba9d2c6e1209669))"
     apiVersion: v2
     appVersion: "1.0"
@@ -92,4 +105,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T01:26:04.784229601Z"
+generated: "2024-07-15T01:29:42.405362175Z"
