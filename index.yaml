@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "deluge values.yaml path ([d2d12f1](https://github.com/hamishfor/helm-charts/commit/d2d12f1214fb2fabd548df39fec3511174223925))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-15T02:18:58.209724533Z"
+    description: Applications
+    digest: 8059bec8e8808351c89970ff61862908e74e95d915ce35a2092a54047f6ba5dd
+    name: applications
+    type: application
+    urls:
+    - applications-1.6.10.tgz
+    version: 1.6.10
+  - annotations:
+      artifacthub.io/changes: |2
          - "values.yaml -> values.yml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
     apiVersion: v2
     appVersion: "1.0"
@@ -183,4 +196,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T02:14:11.03859074Z"
+generated: "2024-07-15T02:18:58.209847383Z"
