@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "prometheus version ([5499a11](https://github.com/hamishfor/helm-charts/commit/5499a115d895879987de798b9867a6bab8f6bd4d))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-16T09:06:14.567176589Z"
+    description: Applications
+    digest: ae3566cd16e177b5fe460cd3ddf68a6ef43ecfd94c392abd61a1b1db06dc363b
+    name: applications
+    type: application
+    urls:
+    - applications-1.7.1.tgz
+    version: 1.7.1
+  - annotations:
+      artifacthub.io/changes: |2
          - "prometheus ([89061d7](https://github.com/hamishfor/helm-charts/commit/89061d7a78328898a86ad8b4db6f0a26979fccb2))"
     apiVersion: v2
     appVersion: "1.0"
@@ -209,4 +222,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-16T09:02:23.217209102Z"
+generated: "2024-07-16T09:06:14.567278961Z"
