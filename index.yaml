@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "prometheus ([89061d7](https://github.com/hamishfor/helm-charts/commit/89061d7a78328898a86ad8b4db6f0a26979fccb2))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-07-16T09:02:23.217073488Z"
+    description: Applications
+    digest: 4c32a1b51ad8435c13a63e3d56a59d38525f4a38af56f107f321c318d458b34a
+    name: applications
+    type: application
+    urls:
+    - applications-1.7.0.tgz
+    version: 1.7.0
+  - annotations:
+      artifacthub.io/changes: |2
          - "deluge values.yaml path ([d2d12f1](https://github.com/hamishfor/helm-charts/commit/d2d12f1214fb2fabd548df39fec3511174223925))"
     apiVersion: v2
     appVersion: "1.0"
@@ -196,4 +209,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-15T02:18:58.209847383Z"
+generated: "2024-07-16T09:02:23.217209102Z"
