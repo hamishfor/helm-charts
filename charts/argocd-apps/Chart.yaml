@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.7.1
+version: 1.7.2
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,4 +23,4 @@ version: 1.7.1
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "prometheus version ([5499a11](https://github.com/hamishfor/helm-charts/commit/5499a115d895879987de798b9867a6bab8f6bd4d))"
+     - "update prometheus to correct chart version ([3d70dd3](https://github.com/hamishfor/helm-charts/commit/3d70dd3e04123582fbf5079d9cc0301bfe3e6796))"
