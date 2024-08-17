@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "bitwarden ([831edc7](https://github.com/hamishfor/helm-charts/commit/831edc7c4eccbb541a921b2e3327aef78ac9aace))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-08-17T11:50:49.903872182Z"
+    description: Applications
+    digest: b5988219b9bb04fca10b2dfc86a1f23fe133abfb671c880ad3ecb6ada15ec811
+    name: applications
+    type: application
+    urls:
+    - applications-1.8.0.tgz
+    version: 1.8.0
+  - annotations:
+      artifacthub.io/changes: |2
          - "update prometheus to correct chart version ([3d70dd3](https://github.com/hamishfor/helm-charts/commit/3d70dd3e04123582fbf5079d9cc0301bfe3e6796))"
     apiVersion: v2
     appVersion: "1.0"
@@ -235,4 +248,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-07-27T12:01:13.257144947Z"
+generated: "2024-08-17T11:50:49.90403704Z"
