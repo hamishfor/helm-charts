@@ -5,3 +5,10 @@ spec:
     repoURL: "git@github.com:hamishfor/helm-values.git"
     targetRevision: main
     ref: values_repo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PruneLast=true
