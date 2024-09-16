@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "app-of-apps create namespace ([a0e0d38](https://github.com/hamishfor/helm-charts/commit/a0e0d38c54756a915ff7f36f2e9398a54a4b0f19))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-09-16T11:10:33.568448956Z"
+    description: Applications
+    digest: 4e5581a0eada698156e7f37302c54ac60ea34f743360301ccf5743bdd8ae503b
+    name: applications
+    type: application
+    urls:
+    - applications-1.8.2.tgz
+    version: 1.8.2
+  - annotations:
+      artifacthub.io/changes: |2
          - "prunelast=true ([83fccc2](https://github.com/hamishfor/helm-charts/commit/83fccc2c9ffff6977077c0e62aaeee93156ad534))"
     apiVersion: v2
     appVersion: "1.0"
@@ -261,4 +274,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-09-16T10:39:52.434425428Z"
+generated: "2024-09-16T11:10:33.568616739Z"
