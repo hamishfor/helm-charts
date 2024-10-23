@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "supabase 1.0.0 ([b3b5666](https://github.com/hamishfor/helm-charts/commit/b3b566640b3f5922cd7014e4e7c2c5b3cad704e8))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-10-23T18:28:09.658851035Z"
+    description: Applications
+    digest: 6e81a6c728d69a265832a456e73668c2438885dde20864cbcd5072c452ab22a6
+    name: applications
+    type: application
+    urls:
+    - applications-1.9.1.tgz
+    version: 1.9.1
+  - annotations:
+      artifacthub.io/changes: |2
          - "app-of-apps create namespace ([a0e0d38](https://github.com/hamishfor/helm-charts/commit/a0e0d38c54756a915ff7f36f2e9398a54a4b0f19))"
     apiVersion: v2
     appVersion: "1.0"
@@ -274,4 +287,4 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
-generated: "2024-09-16T11:10:33.568616739Z"
+generated: "2024-10-23T18:28:09.659020022Z"
