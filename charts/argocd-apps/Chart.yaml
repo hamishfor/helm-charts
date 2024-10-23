@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.8.2
+version: 1.9.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,4 +23,4 @@ version: 1.8.2
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "app-of-apps create namespace ([a0e0d38](https://github.com/hamishfor/helm-charts/commit/a0e0d38c54756a915ff7f36f2e9398a54a4b0f19))"
+     - "supabase ([ecd7dc3](https://github.com/hamishfor/helm-charts/commit/ecd7dc3a76e1ea973dd2d61ef7a63b910606f12b))"
