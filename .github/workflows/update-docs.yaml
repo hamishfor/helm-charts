@@ -1,0 +1,96 @@
+name: "Update docs"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "charts/**/README.md"
+      - "charts/**/README.md.gotmpl"
+      - "**/README.md"
+      - "**/README.md.gotmpl"
+      - ".github/workflows/update-docs.yaml"
+
+jobs:
+  publish-readme:
+    permissions:
+      contents: write
+      id-token: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check out VM code
+        uses: actions/checkout@v4
+        with:
+          repository: VictoriaMetrics/VictoriaMetrics
+          ref: master
+          token: ${{ secrets.VM_BOT_GH_TOKEN }}
+          path: __vm-repo
+
+      - name: Import GPG key for VM repo
+        id: import-gpg
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.VM_BOT_GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.VM_BOT_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+          git_config_global: true
+
+      - name: Generate docs
+        run: make gen-docs
+
+      - name: Copy docs
+        id: update
+        run: |
+          rsync -zarv \
+            --include="*/" \
+            --include="*.webp" \
+            --include="*.md" \
+            --exclude="*" \
+            charts/ __vm-repo/docs/helm/
+          cp *.md __vm-repo/docs/helm/
+          echo "BUILDTIME=$(date +%s)" >> $GITHUB_OUTPUT
+          echo "SHORT_SHA=$(git rev-parse --short $GITHUB_SHA)" >> $GITHUB_OUTPUT
+          cp -f README.md ${{ runner.temp }}/README.md
+          for readme in $(find charts/*/README.md)
+          do
+            mkdir -p $(dirname ${{ runner.temp }}/$readme)
+            cp -f $readme ${{ runner.temp }}/$readme
+          done
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          add-paths: docs/helm
+          commit-message: Automatic update helm docs from ${{ github.repository }}@${{ steps.update.outputs.SHORT_SHA }}
+          signoff: true
+          committer: "Github Actions <${{ steps.import-gpg.outputs.email }}>"
+          path: __vm-repo
+          branch: helm-docs-update-${{ steps.update.outputs.BUILDTIME }}
+          token: ${{ secrets.VM_BOT_GH_TOKEN }}
+          delete-branch: true
+          title: Automatic update helm docs from ${{ github.repository }}@${{ steps.update.outputs.SHORT_SHA }}
+
+      - name: Checkout to pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Synchronize docs
+        run: |
+          cp -f ${{ runner.temp }}/README.md .
+          cp -fr ${{ runner.temp }}/charts ./
+          if [[ -n $(git status --porcelain --untracked-files=no) ]]; then
+            git add README.md
+            git add charts/*/README.md
+            git commit -S -m "Synchronize docs"
+            git push origin gh-pages
+          fi
+        env:
+          GH_TOKEN: "${{ secrets.VM_BOT_GH_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.VM_BOT_GH_TOKEN }}"
