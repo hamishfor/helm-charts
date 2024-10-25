@@ -44,7 +44,7 @@ jobs:
           done
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@a917fd15b20e8b64b94d9158ad54cd6345335584 # v1.6.0
+        uses: helm/chart-releaser-action@a917fd15b20e8b64b94d9158ad54cd6345335584 # v1.6.1
         with:
           version: v1.6.1 # renovate: datasource=github-releases depName=chart-releaser packageName=helm/chart-releaser
           config: .github/cr.yaml
