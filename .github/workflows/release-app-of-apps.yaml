@@ -47,7 +47,7 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v43
         with:
-          dir_names_max_depth: 2
+          dir_names_max_depth: 3
           dir_names_exclude_current_dir: "true"
           dir_names: "true"
           files: "charts/argocd-apps/*"
