@@ -3,6 +3,30 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "chart version supabase ([04b02e9](https://github.com/hamishfor/helm-charts/commit/04b02e9c603689142dcfe98bf4e066da631817d3))"
+         - "ci ([8890fd8](https://github.com/hamishfor/helm-charts/commit/8890fd8b97785c2cc50a01ecce7cd21adfb2284c))"
+         - "cr.yaml ([efb2777](https://github.com/hamishfor/helm-charts/commit/efb2777585b740acfd77143f79508b8284efdc1a))"
+         - "dir depth ([1fdcbb4](https://github.com/hamishfor/helm-charts/commit/1fdcbb41adec6678268503494a9a2086aefc42e1))"
+         - "file.txt ([393341d](https://github.com/hamishfor/helm-charts/commit/393341d5cd2832358994ba55bb61dfb00495789d))"
+         - "file.txt ([b04ab8a](https://github.com/hamishfor/helm-charts/commit/b04ab8a2c959b6947c65a70b05055f9d82a6d014))"
+         - "file2.txt ([6fb4dbd](https://github.com/hamishfor/helm-charts/commit/6fb4dbd8cb88b699d5f4f860c1580d4f6c74fd3f))"
+         - "file3.txt ([b2875ed](https://github.com/hamishfor/helm-charts/commit/b2875edbfe39bb01d36b2f71eb2a1ad02304e979))"
+         - "revert old supabase semver upgrade ([abd9ba6](https://github.com/hamishfor/helm-charts/commit/abd9ba66b58430f89e870a3b63daca18b63d1002))"
+         - "semver for app of apps ([a2f50a4](https://github.com/hamishfor/helm-charts/commit/a2f50a486987d874a00dfe4ef634846dc9c2b645))"
+         - "supabase ([00f45b7](https://github.com/hamishfor/helm-charts/commit/00f45b7874d68d463eb04c8752694c1800724559))"
+         - "update owner ([87eed1a](https://github.com/hamishfor/helm-charts/commit/87eed1a48e14ff20c8f76061c58e943b3c712f67))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-10-26T03:12:29.608607476Z"
+    description: Applications
+    digest: f718143aa48a6623d988008a5963e9a5c2a44f7bd44006525b7829aa3518dcd2
+    name: applications
+    type: application
+    urls:
+    - applications-1.9.2.tgz
+    version: 1.9.2
+  - annotations:
+      artifacthub.io/changes: |2
          - "supabase 1.0.0 ([b3b5666](https://github.com/hamishfor/helm-charts/commit/b3b566640b3f5922cd7014e4e7c2c5b3cad704e8))"
     apiVersion: v2
     appVersion: "1.0"
@@ -333,4 +357,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2024-10-25T04:42:05.866805128Z"
+generated: "2024-10-26T03:12:29.608781531Z"
