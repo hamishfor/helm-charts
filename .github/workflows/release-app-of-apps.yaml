@@ -77,8 +77,8 @@ jobs:
           for dir in ${ALL_CHANGED_FILES}; do
             pushd "$dir";
 
-            cp -f ../cr.yaml ./
-            cp -f ../release.config.cjs ./
+            cp -f ../../.github/cr.yaml ./
+            cp -f ../../.github/release.config.cjs ./
             ln -s ../../.cr-release-packages
 
             export CHART_NAME=$(basename $(pwd))
