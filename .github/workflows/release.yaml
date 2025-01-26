@@ -1,17 +1,17 @@
 name: Release Charts
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
     paths:
       - "charts/**"
-  workflow_dispatch:
 
 permissions:
   contents: write
 
-jobs:
+jobs: 
   release:
     runs-on: ubuntu-latest
     steps:
