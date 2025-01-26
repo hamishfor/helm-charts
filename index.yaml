@@ -3,6 +3,20 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "release.yaml typo ([64778d7](https://github.com/hamishfor/helm-charts/commit/64778d72068bf3cab3419511f0708b04fa53e1d1))"
+         - "remove file3.txt ([f2cf1cf](https://github.com/hamishfor/helm-charts/commit/f2cf1cf83af096bd2d171eab7196ab6364748089))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-01-26T23:37:45.294329216Z"
+    description: Applications
+    digest: 79bc79c7d6762266f1b1b78e0cb415522979a47334123133733a51e9482ceba6
+    name: applications
+    type: application
+    urls:
+    - applications-1.9.3.tgz
+    version: 1.9.3
+  - annotations:
+      artifacthub.io/changes: |2
          - "chart version supabase ([04b02e9](https://github.com/hamishfor/helm-charts/commit/04b02e9c603689142dcfe98bf4e066da631817d3))"
          - "ci ([8890fd8](https://github.com/hamishfor/helm-charts/commit/8890fd8b97785c2cc50a01ecce7cd21adfb2284c))"
          - "cr.yaml ([efb2777](https://github.com/hamishfor/helm-charts/commit/efb2777585b740acfd77143f79508b8284efdc1a))"
@@ -357,4 +371,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2024-10-26T03:12:29.608781531Z"
+generated: "2025-01-26T23:37:45.294489587Z"
