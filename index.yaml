@@ -6,6 +6,19 @@ entries:
          - "hekm-docs ([fff5d6f](https://github.com/hamishfor/helm-charts/commit/fff5d6fef1ae510debe333d588798d333a4281e7))"
     apiVersion: v2
     appVersion: "1.0"
+    created: "2025-02-09T09:07:31.166922434Z"
+    description: Applications
+    digest: 2892b793dc5dfa5e1e6213f62a68a1632ae626feff3adc443efa9b0f834c5eb8
+    name: applications
+    type: application
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/applications-1.9.5/applications-1.9.5.tgz
+    version: 1.9.5
+  - annotations:
+      artifacthub.io/changes: |2
+         - "hekm-docs ([fff5d6f](https://github.com/hamishfor/helm-charts/commit/fff5d6fef1ae510debe333d588798d333a4281e7))"
+    apiVersion: v2
+    appVersion: "1.0"
     created: "2025-01-26T23:42:03.061312998Z"
     description: Applications
     digest: 3a096a9fb15e5e0d7859352899499b241173b494642f10d57921b48231a1414d
@@ -384,4 +397,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-01-26T23:42:03.061530454Z"
+generated: "2025-02-09T09:07:31.167065641Z"
