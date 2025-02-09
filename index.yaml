@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "**pihole:** release ([e6a9b45](https://github.com/hamishfor/helm-charts/commit/e6a9b459041b8480b43a8bbe6b47376f46578dd8))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-02-09T09:53:10.068520221Z"
+    description: Applications
+    digest: 0668aa59b09835605e9ec5483c715701a8d7405d7acd05100a572ddbb06993fe
+    name: applications
+    type: application
+    urls:
+    - applications-1.11.0.tgz
+    version: 1.11.0
+  - annotations:
+      artifacthub.io/changes: |2
          - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
          - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
          - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
@@ -469,4 +482,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-02-09T09:52:53.500829366Z"
+generated: "2025-02-09T09:53:10.068910096Z"
