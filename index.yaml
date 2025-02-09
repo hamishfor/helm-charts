@@ -11,6 +11,24 @@ entries:
          - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
     apiVersion: v2
     appVersion: "1.0"
+    created: "2025-02-09T09:23:39.836173703Z"
+    description: Applications
+    digest: c60b8095d626b1f2a500d3fb188bf58aade9f7eb332219ba6b19db76ed48f38f
+    name: applications
+    type: application
+    urls:
+    - https://github.com/hamishfor/helm-charts/releases/download/applications-1.10.2/applications-1.10.2.tgz
+    version: 1.10.2
+  - annotations:
+      artifacthub.io/changes: |2
+         - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
+         - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
+         - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
+         - "remove serversideapply true ([8fde4a4](https://github.com/hamishfor/helm-charts/commit/8fde4a47aef9976589633f4f304ffcd436552dce))"
+         - "Serverside Apply test on prometheus stack ([c4aa4bd](https://github.com/hamishfor/helm-charts/commit/c4aa4bd3df15d5a023b17c32ae458b74e9888790))"
+         - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
+    apiVersion: v2
+    appVersion: "1.0"
     created: "2025-02-09T09:19:15.554344791Z"
     description: Applications
     digest: a5f196060e618d7e366867112f4c139a7aa58e84870dddd455718a443b5f8858
@@ -415,4 +433,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-02-09T09:19:15.554610928Z"
+generated: "2025-02-09T09:23:39.83635418Z"
