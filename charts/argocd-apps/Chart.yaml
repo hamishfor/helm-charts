@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.10.4
+version: 1.11.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,9 +23,4 @@ version: 1.10.4
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
-     - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
-     - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
-     - "remove serversideapply true ([8fde4a4](https://github.com/hamishfor/helm-charts/commit/8fde4a47aef9976589633f4f304ffcd436552dce))"
-     - "Serverside Apply test on prometheus stack ([c4aa4bd](https://github.com/hamishfor/helm-charts/commit/c4aa4bd3df15d5a023b17c32ae458b74e9888790))"
-     - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
+     - "**pihole:** release ([e6a9b45](https://github.com/hamishfor/helm-charts/commit/e6a9b459041b8480b43a8bbe6b47376f46578dd8))"
