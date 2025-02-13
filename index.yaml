@@ -3,6 +3,19 @@ entries:
   applications:
   - annotations:
       artifacthub.io/changes: |2
+         - "**external-dns:** correct chart name ([4f6da7d](https://github.com/hamishfor/helm-charts/commit/4f6da7da0738a76434691c6ecf718777a3d4db2b))"
+    apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-02-13T20:45:29.061386587Z"
+    description: Applications
+    digest: b8a77b1dbcb29e052d840c990cda87f35e805aee4e108b45eb9352138743edd2
+    name: applications
+    type: application
+    urls:
+    - applications-1.12.2.tgz
+    version: 1.12.2
+  - annotations:
+      artifacthub.io/changes: |2
          - "**external-dns:** fix version ([f88d2b9](https://github.com/hamishfor/helm-charts/commit/f88d2b9145d4f0e7477201e86a83711600cbcf93))"
     apiVersion: v2
     appVersion: "1.0"
@@ -508,4 +521,4 @@ entries:
     urls:
     - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-02-13T20:39:49.062187692Z"
+generated: "2025-02-13T20:45:29.061605886Z"
