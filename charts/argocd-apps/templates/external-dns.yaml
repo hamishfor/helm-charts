@@ -14,8 +14,8 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://kubernetes-sigs.github.io/external-dns/
-      targetRevision: "0.15.1"
-      chart: pihole
+      targetRevision: "1.15.1"
+      chart: external-dns
       helm:
         valueFiles:
           - $values_repo/charts/external-dns/values.yml
