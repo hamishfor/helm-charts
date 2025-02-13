@@ -72,20 +72,34 @@ jobs:
           CR_TOKEN: "${{ secrets.CR_TOKEN_2 }}"
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          npm install ci
-          mkdir .cr-release-packages
-          for dir in ${ALL_CHANGED_FILES}; do
-            pushd "$dir";
+          npm ci
+          mkdir -p .cr-release-packages
+
+          # Extract unique chart directories
+          declare -A CHART_DIRS
+          IFS=' ' read -r -a FILES <<< "$ALL_CHANGED_FILES"
+
+          for file in "${FILES[@]}"; do
+            chart_dir=$(echo "$file" | awk -F'/' '{print $2}')
+            if [[ -d "charts/$chart_dir" ]]; then
+              CHART_DIRS["$chart_dir"]=1
+            fi
+          done
+
+          # Process each unique chart directory
+          for dir in "${!CHART_DIRS[@]}"; do
+            pushd "charts/$dir"
 
             cp -f ../../.github/cr.yaml ./
             cp -f ../../.github/release.config.cjs ./
             ln -s ../../.cr-release-packages
 
-            export CHART_NAME=$(basename $(pwd))
-            npx semantic-release;
+            export CHART_NAME=$(basename "$PWD")
+            npx semantic-release
 
-            popd;
+            popd
           done
 
           echo "CR Index"
           [ "$(ls -A .cr-release-packages)" ] && cr index -o "hamishfor" -r "helm-charts" --push --packages-with-index --index-path .
+  
