@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: external-dns
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: external-dns
+    server: {{ .Values.spec.destination.server }}
+  sources:
+    - repoURL: {{ .Values.spec.source.repoURL }}
+      targetRevision: {{ .Values.spec.source.targetRevision }}
+      ref: {{ .Values.spec.source.ref }}
+    - repoURL: https://kubernetes-sigs.github.io/external-dns/
+      targetRevision: "1.15.1"
+      chart: pihole
+      helm:
+        valueFiles:
+          - $values_repo/charts/external-dns/values.yml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
