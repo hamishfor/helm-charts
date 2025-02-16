@@ -6,13 +6,13 @@ entries:
          - "**external-dns:** correct chart name ([4f6da7d](https://github.com/hamishfor/helm-charts/commit/4f6da7da0738a76434691c6ecf718777a3d4db2b))"
     apiVersion: v2
     appVersion: "1.0"
-    created: "2025-02-13T20:45:29.061386587Z"
+    created: "2025-02-16T08:40:46.127267382Z"
     description: Applications
-    digest: b8a77b1dbcb29e052d840c990cda87f35e805aee4e108b45eb9352138743edd2
+    digest: ed5c5c6dc927c279159ab653885cf6140a3e385929e72ee80d53d46aa7333bbd
     name: applications
     type: application
     urls:
-    - applications-1.12.2.tgz
+    - https://hamishfor.github.io/helm-charts/applications-1.12.2.tgz
     version: 1.12.2
   - annotations:
       artifacthub.io/changes: |2
@@ -475,6 +475,38 @@ entries:
     urls:
     - applications-1.1.0.tgz
     version: 1.1.0
+  deluge:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.1.1-r8-ls262
+    created: "2025-02-16T08:40:46.12987462Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Deluge is a torrent download client
+    digest: 86a930a049808285802f1e6d78947bb042eff5847d4342285b10d68810d057ff
+    home: https://github.com/hamishfor/helm-charts/tree/main/charts/deluge
+    icon: https://avatars2.githubusercontent.com/u/6733935?v=3&s=200
+    keywords:
+    - deluge
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mark@markmcw.uk
+      name: mcmarkj
+    - email: hamishfor@gmail.com
+      name: hamishfor
+    name: deluge
+    sources:
+    - https://hub.docker.com/r/linuxserver/deluge/
+    - https://deluge-torrent.org/
+    urls:
+    - https://hamishfor.github.io/helm-charts/deluge-5.4.6.tgz
+    version: 5.4.6
   supabase:
   - annotations:
       artifacthub.io/changes: |2
@@ -512,13 +544,13 @@ entries:
          - "supabase ([ecd7dc3](https://github.com/hamishfor/helm-charts/commit/ecd7dc3a76e1ea973dd2d61ef7a63b910606f12b))"
          - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
     apiVersion: v2
-    created: "2024-10-25T04:42:05.866629007Z"
+    created: "2025-02-16T08:40:46.132955901Z"
     description: The open source Firebase alternative.
-    digest: 7dfb34c09c98b7bd608e4a45111c49e73ac4e58b2d1c6579044e3a1863e6a6db
+    digest: e8a322fe23c8db1cd593e544914e13a7f24bb35257bfaf3533d7f07eb4bc8a41
     icon: https://avatars.githubusercontent.com/u/54469796?s=280&v=4
     name: supabase
     type: application
     urls:
-    - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
+    - https://hamishfor.github.io/helm-charts/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-02-13T20:45:29.061605886Z"
+generated: "2025-02-16T08:40:46.126280073Z"
