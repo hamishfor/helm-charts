@@ -6,9 +6,9 @@ entries:
          - "**external-dns:** correct chart name ([4f6da7d](https://github.com/hamishfor/helm-charts/commit/4f6da7da0738a76434691c6ecf718777a3d4db2b))"
     apiVersion: v2
     appVersion: "1.0"
-    created: "2025-02-16T10:34:12.495925055Z"
+    created: "2025-02-16T10:36:08.142623599Z"
     description: Applications
-    digest: 6c1a9cbcd4a901107f575f10327082ce80c599e697d43886bde0817eef52404b
+    digest: d10f2d1ef06eabcb436eaa975f5162aae784f64d63ee96ef032c738b59e405b9
     name: applications
     type: application
     urls:
@@ -482,13 +482,13 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 2.1.1-r8-ls262
-    created: "2025-02-16T10:34:12.498395826Z"
+    created: "2025-02-16T10:36:08.145747421Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
       version: 4.5.2
     description: Deluge is a torrent download client
-    digest: d8861de63ff19709eb7913b2a554272cc64b3c48997a7558762024d6caa65a84
+    digest: 15f21c1aabb09ce65da4633ad1ae220a3fd8413739424892db198931a0423a93
     home: https://github.com/hamishfor/helm-charts/tree/main/charts/deluge
     icon: https://avatars2.githubusercontent.com/u/6733935?v=3&s=200
     keywords:
@@ -575,13 +575,13 @@ entries:
          - "supabase ([ecd7dc3](https://github.com/hamishfor/helm-charts/commit/ecd7dc3a76e1ea973dd2d61ef7a63b910606f12b))"
          - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
     apiVersion: v2
-    created: "2025-02-16T10:34:12.502398405Z"
+    created: "2025-02-16T10:36:08.149108876Z"
     description: The open source Firebase alternative.
-    digest: a764fe2501d1e231f35471d06170ab54975b9f23edf31dc9c6f7c2a623034518
+    digest: 216fe3c563ccae4714b7a6565be8635b00d9d34a2800b64966c87b8f14f501bd
     icon: https://avatars.githubusercontent.com/u/54469796?s=280&v=4
     name: supabase
     type: application
     urls:
     - https://hamishfor.github.io/helm-charts/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-02-16T10:34:12.495490834Z"
+generated: "2025-02-16T10:36:08.141829321Z"
