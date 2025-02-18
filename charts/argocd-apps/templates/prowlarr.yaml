@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://geek-cookbook.github.io/charts/
-      targetRevision: "16.3.2"
+      targetRevision: "4.5.2"
       chart: prowlarr
       helm:
         valueFiles:
