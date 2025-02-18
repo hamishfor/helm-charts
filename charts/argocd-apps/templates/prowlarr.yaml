@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prowlarr
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: prowlarr
+    server: {{ .Values.spec.destination.server }}
+  sources:
+    - repoURL: {{ .Values.spec.source.repoURL }}
+      targetRevision: {{ .Values.spec.source.targetRevision }}
+      ref: {{ .Values.spec.source.ref }}
+    - repoURL: https://geek-cookbook.github.io/charts/
+      targetRevision: "16.3.2"
+      chart: prowlarr
+      helm:
+        valueFiles:
+          - $values_repo/charts/prowlarr/values.yml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
