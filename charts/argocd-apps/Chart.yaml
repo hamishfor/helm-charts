@@ -23,4 +23,4 @@ version: 1.13.1
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "**prowlarr:** release ([34070e6](https://github.com/hamishfor/helm-charts/commit/34070e66c0ebf421774356b735e4cfa53444f4d0))"
+     - "**prowlarr:** update version ([31043fc](https://github.com/hamishfor/helm-charts/commit/31043fc266c5765e6fc30f8aab8b73ced8f600b6))"
