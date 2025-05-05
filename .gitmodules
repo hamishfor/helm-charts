@@ -1,0 +1,3 @@
+[submodule "opencloud"]
+	path = charts/opencloud
+	url = https://github.com/opencloud-eu/helm
