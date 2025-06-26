@@ -38,7 +38,19 @@ Kubernetes: `>=1.16.0-0`
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"linuxserver/deluge"` | image repository |
 | image.tag | string | `"version-2.0.3-2201906121747ubuntu18.04.1"` | image tag |
-| ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
+| ingress.web.annotations | object | `{"cert-manager.io/cluster-issuer":"letsencrypt-production","kubernetes.io/tls-acme":"true"}` | Provide additional annotations which may be required. |
+| ingress.web.enabled | bool | `true` | Enables or disables the ingress |
+| ingress.web.hosts[0].host | string | `"deluge.hamishandholly.com"` | Host address. Helm template can be passed. |
+| ingress.web.hosts[0].paths[0].path | string | `"/"` | Path.  Helm template can be passed. |
+| ingress.web.hosts[0].paths[0].pathType | string | `"Prefix"` | Ignored if not kubeVersion >= 1.14-0 |
+| ingress.web.hosts[0].paths[0].service.name | string | `nil` | Overrides the service name reference for this path |
+| ingress.web.hosts[0].paths[0].service.port | int | `8112` | Overrides the service port reference for this path |
+| ingress.web.ingressClassName | string | `"nginx"` | Set the ingressClass that is used for this ingress. Requires Kubernetes >=1.19 |
+| ingress.web.labels | object | `{}` | Provide additional labels which may be required. |
+| ingress.web.nameOverride | string | `nil` | Override the name suffix that is used for this ingress. |
+| ingress.web.primary | bool | `true` | Make this the primary ingress (used in probes, notes, etc...). If there is more than 1 ingress, make sure that only 1 ingress is marked as primary. |
+| ingress.web.tls[0].hosts[0] | string | `"deluge.hamishandholly.com"` |  |
+| ingress.web.tls[0].secretName | string | `"deluge-tls"` |  |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
 | service | object | See values.yaml | Configures service settings for the chart. |
 

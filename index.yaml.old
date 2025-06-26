@@ -1,0 +1,524 @@
+apiVersion: v1
+entries:
+  applications:
+    - annotations:
+        artifacthub.io/changes: |2
+         - "**external-dns:** correct chart name ([4f6da7d](https://github.com/hamishfor/helm-charts/commit/4f6da7da0738a76434691c6ecf718777a3d4db2b))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-13T20:45:29.061386587Z"
+      description: Applications
+      digest: b8a77b1dbcb29e052d840c990cda87f35e805aee4e108b45eb9352138743edd2
+      name: applications
+      type: application
+      urls:
+        - applications-1.12.2.tgz
+      version: 1.12.2
+    - annotations:
+        artifacthub.io/changes: |2
+         - "**external-dns:** fix version ([f88d2b9](https://github.com/hamishfor/helm-charts/commit/f88d2b9145d4f0e7477201e86a83711600cbcf93))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-13T20:39:49.061980213Z"
+      description: Applications
+      digest: 9dd3a75bde3414fbe36258fb55db82b53859bb76ab7e9da10bd9dfef4e99bcac
+      name: applications
+      type: application
+      urls:
+        - applications-1.12.1.tgz
+      version: 1.12.1
+    - annotations:
+        artifacthub.io/changes: |2
+         - "**external-dns:** release ([9da5029](https://github.com/hamishfor/helm-charts/commit/9da5029d21f881fc668cb65f65e8d5ebd66a7ebb))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-13T10:05:59.106122479Z"
+      description: Applications
+      digest: 97da907302e5ff5617ce7d887c99b3e47be7fb69c32b786b9ddd36846b9eb83c
+      name: applications
+      type: application
+      urls:
+        - applications-1.12.0.tgz
+      version: 1.12.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "**pihole:** release ([e6a9b45](https://github.com/hamishfor/helm-charts/commit/e6a9b459041b8480b43a8bbe6b47376f46578dd8))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-09T09:53:10.068520221Z"
+      description: Applications
+      digest: 0668aa59b09835605e9ec5483c715701a8d7405d7acd05100a572ddbb06993fe
+      name: applications
+      type: application
+      urls:
+        - applications-1.11.0.tgz
+      version: 1.11.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
+         - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
+         - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
+         - "remove serversideapply true ([8fde4a4](https://github.com/hamishfor/helm-charts/commit/8fde4a47aef9976589633f4f304ffcd436552dce))"
+         - "Serverside Apply test on prometheus stack ([c4aa4bd](https://github.com/hamishfor/helm-charts/commit/c4aa4bd3df15d5a023b17c32ae458b74e9888790))"
+         - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-09T09:52:53.500488108Z"
+      description: Applications
+      digest: f7dbc15b1f0c442d79bbe5f25bf59cc56b969438e4848d8d7f03955d34619ec3
+      name: applications
+      type: application
+      urls:
+        - https://github.com/hamishfor/helm-charts/releases/download/applications-1.10.4/applications-1.10.4.tgz
+      version: 1.10.4
+    - annotations:
+        artifacthub.io/changes: |2
+         - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
+         - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
+         - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
+         - "remove serversideapply true ([8fde4a4](https://github.com/hamishfor/helm-charts/commit/8fde4a47aef9976589633f4f304ffcd436552dce))"
+         - "Serverside Apply test on prometheus stack ([c4aa4bd](https://github.com/hamishfor/helm-charts/commit/c4aa4bd3df15d5a023b17c32ae458b74e9888790))"
+         - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-09T09:26:10.57920607Z"
+      description: Applications
+      digest: e133de48077614535fff7dfbde6b9b2ad05e63e82bbba72bf085e7c6ec0f4bb8
+      name: applications
+      type: application
+      urls:
+        - https://github.com/hamishfor/helm-charts/releases/download/applications-1.10.3/applications-1.10.3.tgz
+      version: 1.10.3
+    - annotations:
+        artifacthub.io/changes: |2
+         - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
+         - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
+         - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
+         - "remove serversideapply true ([8fde4a4](https://github.com/hamishfor/helm-charts/commit/8fde4a47aef9976589633f4f304ffcd436552dce))"
+         - "Serverside Apply test on prometheus stack ([c4aa4bd](https://github.com/hamishfor/helm-charts/commit/c4aa4bd3df15d5a023b17c32ae458b74e9888790))"
+         - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-09T09:23:39.836173703Z"
+      description: Applications
+      digest: c60b8095d626b1f2a500d3fb188bf58aade9f7eb332219ba6b19db76ed48f38f
+      name: applications
+      type: application
+      urls:
+        - https://github.com/hamishfor/helm-charts/releases/download/applications-1.10.2/applications-1.10.2.tgz
+      version: 1.10.2
+    - annotations:
+        artifacthub.io/changes: |2
+         - "add a globstar pattern to changed files ([e85f8b3](https://github.com/hamishfor/helm-charts/commit/e85f8b3f5763fca06d5f484fed17dd237d542729))"
+         - "github actions dir depth ([5ea1aa7](https://github.com/hamishfor/helm-charts/commit/5ea1aa731bfa813c45861d2984a37ad94da5b331))"
+         - "pihole serversideapply true ([0f9e5df](https://github.com/hamishfor/helm-charts/commit/0f9e5df66d8d8299cdc919fe1d062dec00915314))"
+         - "remove serversideapply true ([8fde4a4](https://github.com/hamishfor/helm-charts/commit/8fde4a47aef9976589633f4f304ffcd436552dce))"
+         - "Serverside Apply test on prometheus stack ([c4aa4bd](https://github.com/hamishfor/helm-charts/commit/c4aa4bd3df15d5a023b17c32ae458b74e9888790))"
+         - "pihole ([52ed233](https://github.com/hamishfor/helm-charts/commit/52ed2334ce82773b77a9a28fe879457a422dd270))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-09T09:19:15.554344791Z"
+      description: Applications
+      digest: a5f196060e618d7e366867112f4c139a7aa58e84870dddd455718a443b5f8858
+      name: applications
+      type: application
+      urls:
+        - https://github.com/hamishfor/helm-charts/releases/download/applications-1.10.1/applications-1.10.1.tgz
+      version: 1.10.1
+    - annotations:
+        artifacthub.io/changes: |2
+         - "hekm-docs ([fff5d6f](https://github.com/hamishfor/helm-charts/commit/fff5d6fef1ae510debe333d588798d333a4281e7))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-02-09T09:07:31.166922434Z"
+      description: Applications
+      digest: 2892b793dc5dfa5e1e6213f62a68a1632ae626feff3adc443efa9b0f834c5eb8
+      name: applications
+      type: application
+      urls:
+        - https://github.com/hamishfor/helm-charts/releases/download/applications-1.9.5/applications-1.9.5.tgz
+      version: 1.9.5
+    - annotations:
+        artifacthub.io/changes: |2
+         - "hekm-docs ([fff5d6f](https://github.com/hamishfor/helm-charts/commit/fff5d6fef1ae510debe333d588798d333a4281e7))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-01-26T23:42:03.061312998Z"
+      description: Applications
+      digest: 3a096a9fb15e5e0d7859352899499b241173b494642f10d57921b48231a1414d
+      name: applications
+      type: application
+      urls:
+        - applications-1.9.4.tgz
+      version: 1.9.4
+    - annotations:
+        artifacthub.io/changes: |2
+         - "release.yaml typo ([64778d7](https://github.com/hamishfor/helm-charts/commit/64778d72068bf3cab3419511f0708b04fa53e1d1))"
+         - "remove file3.txt ([f2cf1cf](https://github.com/hamishfor/helm-charts/commit/f2cf1cf83af096bd2d171eab7196ab6364748089))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2025-01-26T23:37:45.294329216Z"
+      description: Applications
+      digest: 79bc79c7d6762266f1b1b78e0cb415522979a47334123133733a51e9482ceba6
+      name: applications
+      type: application
+      urls:
+        - applications-1.9.3.tgz
+      version: 1.9.3
+    - annotations:
+        artifacthub.io/changes: |2
+         - "chart version supabase ([04b02e9](https://github.com/hamishfor/helm-charts/commit/04b02e9c603689142dcfe98bf4e066da631817d3))"
+         - "ci ([8890fd8](https://github.com/hamishfor/helm-charts/commit/8890fd8b97785c2cc50a01ecce7cd21adfb2284c))"
+         - "cr.yaml ([efb2777](https://github.com/hamishfor/helm-charts/commit/efb2777585b740acfd77143f79508b8284efdc1a))"
+         - "dir depth ([1fdcbb4](https://github.com/hamishfor/helm-charts/commit/1fdcbb41adec6678268503494a9a2086aefc42e1))"
+         - "file.txt ([393341d](https://github.com/hamishfor/helm-charts/commit/393341d5cd2832358994ba55bb61dfb00495789d))"
+         - "file.txt ([b04ab8a](https://github.com/hamishfor/helm-charts/commit/b04ab8a2c959b6947c65a70b05055f9d82a6d014))"
+         - "file2.txt ([6fb4dbd](https://github.com/hamishfor/helm-charts/commit/6fb4dbd8cb88b699d5f4f860c1580d4f6c74fd3f))"
+         - "file3.txt ([b2875ed](https://github.com/hamishfor/helm-charts/commit/b2875edbfe39bb01d36b2f71eb2a1ad02304e979))"
+         - "revert old supabase semver upgrade ([abd9ba6](https://github.com/hamishfor/helm-charts/commit/abd9ba66b58430f89e870a3b63daca18b63d1002))"
+         - "semver for app of apps ([a2f50a4](https://github.com/hamishfor/helm-charts/commit/a2f50a486987d874a00dfe4ef634846dc9c2b645))"
+         - "supabase ([00f45b7](https://github.com/hamishfor/helm-charts/commit/00f45b7874d68d463eb04c8752694c1800724559))"
+         - "update owner ([87eed1a](https://github.com/hamishfor/helm-charts/commit/87eed1a48e14ff20c8f76061c58e943b3c712f67))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-10-26T03:12:29.608607476Z"
+      description: Applications
+      digest: f718143aa48a6623d988008a5963e9a5c2a44f7bd44006525b7829aa3518dcd2
+      name: applications
+      type: application
+      urls:
+        - applications-1.9.2.tgz
+      version: 1.9.2
+    - annotations:
+        artifacthub.io/changes: |2
+         - "supabase 1.0.0 ([b3b5666](https://github.com/hamishfor/helm-charts/commit/b3b566640b3f5922cd7014e4e7c2c5b3cad704e8))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-10-23T18:28:09.658851035Z"
+      description: Applications
+      digest: 6e81a6c728d69a265832a456e73668c2438885dde20864cbcd5072c452ab22a6
+      name: applications
+      type: application
+      urls:
+        - applications-1.9.1.tgz
+      version: 1.9.1
+    - annotations:
+        artifacthub.io/changes: |2
+         - "app-of-apps create namespace ([a0e0d38](https://github.com/hamishfor/helm-charts/commit/a0e0d38c54756a915ff7f36f2e9398a54a4b0f19))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-09-16T11:10:33.568448956Z"
+      description: Applications
+      digest: 4e5581a0eada698156e7f37302c54ac60ea34f743360301ccf5743bdd8ae503b
+      name: applications
+      type: application
+      urls:
+        - applications-1.8.2.tgz
+      version: 1.8.2
+    - annotations:
+        artifacthub.io/changes: |2
+         - "prunelast=true ([83fccc2](https://github.com/hamishfor/helm-charts/commit/83fccc2c9ffff6977077c0e62aaeee93156ad534))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-09-16T10:39:52.434193004Z"
+      description: Applications
+      digest: 0701ba2bb791cb8fd4a7311c0cf54a16abc971f6a62a81dea1d8fd5be632fc35
+      name: applications
+      type: application
+      urls:
+        - applications-1.8.1.tgz
+      version: 1.8.1
+    - annotations:
+        artifacthub.io/changes: |2
+         - "bitwarden ([831edc7](https://github.com/hamishfor/helm-charts/commit/831edc7c4eccbb541a921b2e3327aef78ac9aace))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-08-17T11:50:49.903872182Z"
+      description: Applications
+      digest: b5988219b9bb04fca10b2dfc86a1f23fe133abfb671c880ad3ecb6ada15ec811
+      name: applications
+      type: application
+      urls:
+        - applications-1.8.0.tgz
+      version: 1.8.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "update prometheus to correct chart version ([3d70dd3](https://github.com/hamishfor/helm-charts/commit/3d70dd3e04123582fbf5079d9cc0301bfe3e6796))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-27T12:01:13.257005494Z"
+      description: Applications
+      digest: 6a2896ad8ce80ceb8cd686cdffb9e4548280676476d2a6af5052e0170685d3ca
+      name: applications
+      type: application
+      urls:
+        - applications-1.7.2.tgz
+      version: 1.7.2
+    - annotations:
+        artifacthub.io/changes: |2
+         - "prometheus version ([5499a11](https://github.com/hamishfor/helm-charts/commit/5499a115d895879987de798b9867a6bab8f6bd4d))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-16T09:06:14.567176589Z"
+      description: Applications
+      digest: ae3566cd16e177b5fe460cd3ddf68a6ef43ecfd94c392abd61a1b1db06dc363b
+      name: applications
+      type: application
+      urls:
+        - applications-1.7.1.tgz
+      version: 1.7.1
+    - annotations:
+        artifacthub.io/changes: |2
+         - "prometheus ([89061d7](https://github.com/hamishfor/helm-charts/commit/89061d7a78328898a86ad8b4db6f0a26979fccb2))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-16T09:02:23.217073488Z"
+      description: Applications
+      digest: 4c32a1b51ad8435c13a63e3d56a59d38525f4a38af56f107f321c318d458b34a
+      name: applications
+      type: application
+      urls:
+        - applications-1.7.0.tgz
+      version: 1.7.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "deluge values.yaml path ([d2d12f1](https://github.com/hamishfor/helm-charts/commit/d2d12f1214fb2fabd548df39fec3511174223925))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T02:18:58.209724533Z"
+      description: Applications
+      digest: 8059bec8e8808351c89970ff61862908e74e95d915ce35a2092a54047f6ba5dd
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.10.tgz
+      version: 1.6.10
+    - annotations:
+        artifacthub.io/changes: |2
+         - "values.yaml -> values.yml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T02:14:11.038490031Z"
+      description: Applications
+      digest: 50bacaa3802bb29599e7075f6373e5683febf5cc5918fcb33e3f52da7dd5412a
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.9.tgz
+      version: 1.6.9
+    - annotations:
+        artifacthub.io/changes: |2
+         - "values repo revision ([1b49259](https://github.com/hamishfor/helm-charts/commit/1b492595280bc339815c9c35961bf01b505f9c17))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:56:25.118028151Z"
+      description: Applications
+      digest: fbb7d5ae7bbfc435ed8acd9e715a7b1c50be6844affba8ce6bc27dd72d9de79f
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.8.tgz
+      version: 1.6.8
+    - annotations:
+        artifacthub.io/changes: |2
+         - "values reference var ([719e9b2](https://github.com/hamishfor/helm-charts/commit/719e9b21e04b9d33ff26f9c61d9ef0c25c749d66))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:48:16.847032692Z"
+      description: Applications
+      digest: c48454984b916c5de25bf38121ac24c777c84ff9f629af54078bf8101e4834b0
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.7.tgz
+      version: 1.6.7
+    - annotations:
+        artifacthub.io/changes: |2
+         - "nzbget version ([f2c05b4](https://github.com/hamishfor/helm-charts/commit/f2c05b4e83b2a47cee10a9150efc2f2e342c430e))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:41:04.265066365Z"
+      description: Applications
+      digest: be9268bc162c14042b1040cad23d41a22f6aec2babfc049850882e793936ffd1
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.6.tgz
+      version: 1.6.6
+    - annotations:
+        artifacthub.io/changes: |2
+         - "improper constraint \"app-x.x.x\" ([e73f9d2](https://github.com/hamishfor/helm-charts/commit/e73f9d28823e585b69b84bc43e18138bc8dfb987))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:37:40.494096171Z"
+      description: Applications
+      digest: 13882b790de69c9cf76318c86a91a99ade2eea69b7cdd37b544e05c60eafd684
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.5.tgz
+      version: 1.6.5
+    - annotations:
+        artifacthub.io/changes: |2
+         - "all values->Values ([3c63014](https://github.com/hamishfor/helm-charts/commit/3c63014ac6b61b038f934ea1cdc80b756a5a58b9))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:33:17.31179138Z"
+      description: Applications
+      digest: 0829d039a375a13438b19b129056f3d03726e3374077b568ac43d685a6d1fe6f
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.4.tgz
+      version: 1.6.4
+    - annotations:
+        artifacthub.io/changes: |2
+         - "docker-registry values->Values ([5345bfe](https://github.com/hamishfor/helm-charts/commit/5345bfebf921de1021479f8afbe8e8beaca3b494))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:29:42.405281644Z"
+      description: Applications
+      digest: 9a84790ab8d22f80d2082ae8b0ef319a839094927c357ec14ee8ca8a6db72a36
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.3.tgz
+      version: 1.6.3
+    - annotations:
+        artifacthub.io/changes: |2
+         - "docker-registry chart version ([6c268fe](https://github.com/hamishfor/helm-charts/commit/6c268fe5cd637999756917f46ba9d2c6e1209669))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:26:04.784189085Z"
+      description: Applications
+      digest: 4c7e35daa6c116c8b255ad7e6e913b45b34c760a45daa69818007ae1d042df48
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.2.tgz
+      version: 1.6.2
+    - annotations:
+        artifacthub.io/changes: |2
+         - "deluge indenting ([67706d2](https://github.com/hamishfor/helm-charts/commit/67706d2806425a907a69b02e7d0eae0816daa384))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T01:20:03.092051936Z"
+      description: Applications
+      digest: 825d1949f2f5d47d565d1300034cb8f347ddc583ba8882e85f066495cd5f4666
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.1.tgz
+      version: 1.6.1
+    - annotations:
+        artifacthub.io/changes: |2
+         - "docker-registry ([1e28ef1](https://github.com/hamishfor/helm-charts/commit/1e28ef15811fc14d7aa272cdf72bc14c371317e9))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-15T00:01:57.348114415Z"
+      description: Applications
+      digest: 18d18ed43b870fecf242dd209e00bd1853976d2d3ce4d97e34554193a788e704
+      name: applications
+      type: application
+      urls:
+        - applications-1.6.0.tgz
+      version: 1.6.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "nzbget ([6408f59](https://github.com/hamishfor/helm-charts/commit/6408f5999b6b5618dc7ddb6b2c593c2f48a3eaa2))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-14T12:13:25.565107538Z"
+      description: Applications
+      digest: f6276b51d488a9cfc2fb596f4ee62d218c576d2f82e2e00621b6cc97515c59fe
+      name: applications
+      type: application
+      urls:
+        - applications-1.5.0.tgz
+      version: 1.5.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-08T10:05:47.497457365Z"
+      description: Applications
+      digest: a1eb975ab3995ed4a5f8cbc78c642b3bed6c9ecde8f2029e1a82881a835ffce1
+      name: applications
+      type: application
+      urls:
+        - applications-1.4.0.tgz
+      version: 1.4.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-07T11:37:58.922325833Z"
+      description: Applications
+      digest: e2561a80732f7e7dcb5779cb674dce2bc0f68d6a00fd47dad3e0f42af8601dde
+      name: applications
+      type: application
+      urls:
+        - applications-1.3.0.tgz
+      version: 1.3.0
+    - annotations:
+        artifacthub.io/changes: |2
+         - "sonarr ([210cb08](https://github.com/hamishfor/helm-charts/commit/210cb08ae735217a1fbd09dcc988a32a562dc580))"
+      apiVersion: v2
+      appVersion: "1.0"
+      created: "2024-07-07T11:15:38.506490536Z"
+      description: Applications
+      digest: baa307553ee0c8dfefa8fd6b9224462365e6464c9258b310b285c5e8e396a35a
+      name: applications
+      type: application
+      urls:
+        - applications-1.1.0.tgz
+      version: 1.1.0
+  supabase:
+    - annotations:
+        artifacthub.io/changes: |2
+         - "all values->Values ([3c63014](https://github.com/hamishfor/helm-charts/commit/3c63014ac6b61b038f934ea1cdc80b756a5a58b9))"
+         - "app-of-apps create namespace ([a0e0d38](https://github.com/hamishfor/helm-charts/commit/a0e0d38c54756a915ff7f36f2e9398a54a4b0f19))"
+         - "deluge indenting ([67706d2](https://github.com/hamishfor/helm-charts/commit/67706d2806425a907a69b02e7d0eae0816daa384))"
+         - "deluge values.yaml path ([d2d12f1](https://github.com/hamishfor/helm-charts/commit/d2d12f1214fb2fabd548df39fec3511174223925))"
+         - "docker-registry chart version ([6c268fe](https://github.com/hamishfor/helm-charts/commit/6c268fe5cd637999756917f46ba9d2c6e1209669))"
+         - "docker-registry values->Values ([5345bfe](https://github.com/hamishfor/helm-charts/commit/5345bfebf921de1021479f8afbe8e8beaca3b494))"
+         - "ghtoken ([66ba73f](https://github.com/hamishfor/helm-charts/commit/66ba73f8eeeaf76b8a6efbbd0695934bf334906a))"
+         - "hardcoded values template ([ce58599](https://github.com/hamishfor/helm-charts/commit/ce58599860e2cf276d26994cf5fe036aee6a4f3c))"
+         - "improper constraint \"app-x.x.x\" ([e73f9d2](https://github.com/hamishfor/helm-charts/commit/e73f9d28823e585b69b84bc43e18138bc8dfb987))"
+         - "nginx destination naem ([f518cb9](https://github.com/hamishfor/helm-charts/commit/f518cb9a183dbf9f63f59988f0d3359814b2eb5a))"
+         - "nzbget version ([f2c05b4](https://github.com/hamishfor/helm-charts/commit/f2c05b4e83b2a47cee10a9150efc2f2e342c430e))"
+         - "prometheus version ([5499a11](https://github.com/hamishfor/helm-charts/commit/5499a115d895879987de798b9867a6bab8f6bd4d))"
+         - "prunelast=true ([83fccc2](https://github.com/hamishfor/helm-charts/commit/83fccc2c9ffff6977077c0e62aaeee93156ad534))"
+         - "update prometheus to correct chart version ([3d70dd3](https://github.com/hamishfor/helm-charts/commit/3d70dd3e04123582fbf5079d9cc0301bfe3e6796))"
+         - "values reference var ([719e9b2](https://github.com/hamishfor/helm-charts/commit/719e9b21e04b9d33ff26f9c61d9ef0c25c749d66))"
+         - "values repo revision ([1b49259](https://github.com/hamishfor/helm-charts/commit/1b492595280bc339815c9c35961bf01b505f9c17))"
+         - "values.yaml -> values.yml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
+         - "web = http ([158f8c3](https://github.com/hamishfor/helm-charts/commit/158f8c31b3f3ecbaaa7ab2fd54e8432b0d352259))"
+         - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
+         - "1.5.0 ([0a80106](https://github.com/hamishfor/helm-charts/commit/0a8010630c3a9b85a1411fba09cc12bcbd9fea24))"
+         - "actions CR_TOKEN ([9cbc713](https://github.com/hamishfor/helm-charts/commit/9cbc713d814f67f95f72901a3540ecc8eb1d9df8))"
+         - "bitwarden ([831edc7](https://github.com/hamishfor/helm-charts/commit/831edc7c4eccbb541a921b2e3327aef78ac9aace))"
+         - "deluge -name ([a42b0b9](https://github.com/hamishfor/helm-charts/commit/a42b0b90a55bb0abc1d704babbab8fd7eef227f3))"
+         - "docker-registry ([1e28ef1](https://github.com/hamishfor/helm-charts/commit/1e28ef15811fc14d7aa272cdf72bc14c371317e9))"
+         - "flame ([58d6842](https://github.com/hamishfor/helm-charts/commit/58d6842c908bef49f798e3e0179bc76f766e6e42))"
+         - "nzbget ([6408f59](https://github.com/hamishfor/helm-charts/commit/6408f5999b6b5618dc7ddb6b2c593c2f48a3eaa2))"
+         - "plex ([aeee8d6](https://github.com/hamishfor/helm-charts/commit/aeee8d6077fdb7b37fc1739b9ef4b964d7823ba0))"
+         - "prometheus ([89061d7](https://github.com/hamishfor/helm-charts/commit/89061d7a78328898a86ad8b4db6f0a26979fccb2))"
+         - "radarr -name ([2b1ad92](https://github.com/hamishfor/helm-charts/commit/2b1ad92f0e2b3936beccabb9e0d0724bfc861bc0))"
+         - "sonarr ([210cb08](https://github.com/hamishfor/helm-charts/commit/210cb08ae735217a1fbd09dcc988a32a562dc580))"
+         - "sonarr -name ([c97f447](https://github.com/hamishfor/helm-charts/commit/c97f44740929e03c315f3ff9526b312f0c5a94cb))"
+         - "supabase ([ecd7dc3](https://github.com/hamishfor/helm-charts/commit/ecd7dc3a76e1ea973dd2d61ef7a63b910606f12b))"
+         - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
+      apiVersion: v2
+      created: "2024-10-25T04:42:05.866629007Z"
+      description: The open source Firebase alternative.
+      digest: 7dfb34c09c98b7bd608e4a45111c49e73ac4e58b2d1c6579044e3a1863e6a6db
+      icon: https://avatars.githubusercontent.com/u/54469796?s=280&v=4
+      name: supabase
+      type: application
+      urls:
+        - https://github.com/hamishfor/helm-charts/releases/download/supabase-0.1.3/supabase-0.1.3.tgz
+      version: 0.1.3
+generated: "2025-02-13T20:45:29.061605886Z"

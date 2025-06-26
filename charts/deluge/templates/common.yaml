@@ -14,11 +14,19 @@ probes:
 
 service:
   main:
+    enabled: true
     ports:
-      http:
-        port: 80
+      web:
+        enabled: true
+        port: 8112
         protocol: TCP
-        targetport: 8112
+        targetPort: 8112
+      daemon:
+        enabled: true
+        port: 58846
+        protocol: TCP
+        targetPort: 58846
+
 
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "deluge.harcodedValues" . | fromYaml) -}}
