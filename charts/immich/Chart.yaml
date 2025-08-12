@@ -1,0 +1,15 @@
+
+apiVersion: v2
+name: immich-wrapper
+description: Wrapper chart for Immich with custom configurations
+type: application
+version: 0.1.0
+appVersion: "0.9.3"
+
+dependencies:
+  - name: immich
+    version: "0.9.3"
+    repository: https://immich-app.github.io/immich-charts
+  - name: cnpg
+    version: "0.9.3"
+    repository: https://cloudnative-pg.github.io/charts
