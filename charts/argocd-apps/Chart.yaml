@@ -23,6 +23,11 @@ version: 1.16.0
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
+     - "**app-of-apps:** immich ([c5059dc](https://github.com/hamishfor/helm-charts/commit/c5059dc76e32156f6206fb3959341ad2ae1fff3d))"
+     - "**app-of-apps:** immich ([8f74934](https://github.com/hamishfor/helm-charts/commit/8f749349ac992e04829dea52437219d472bffcd7))"
+     - "**app-of-apps:** immich ([0b35a4d](https://github.com/hamishfor/helm-charts/commit/0b35a4de0d81c0b98c584f8a9567c273998df49f))"
+     - "**app-of-apps:** immich ([c31a130](https://github.com/hamishfor/helm-charts/commit/c31a130bf74c2e8ba293d90a55cb2caa4f9af91f))"
+     - "**app-of-apps:** immich ([e538c83](https://github.com/hamishfor/helm-charts/commit/e538c83c1a8e07020234ff55380fcbcf457d2db8))"
      - "**immich:** chart name ([056f3e7](https://github.com/hamishfor/helm-charts/commit/056f3e785149225f933e29d4f3793c5a1f3c4a67))"
      - "**immich:** init ([4bda44f](https://github.com/hamishfor/helm-charts/commit/4bda44f4313d259aa50e8532a21c9bab6d157e14))"
      - "**immich:** versions ([59c6f41](https://github.com/hamishfor/helm-charts/commit/59c6f41815d962d914f27c3c414610a88651979b))"
