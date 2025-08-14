@@ -50,12 +50,9 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v43
         with:
-          dir_names_max_depth: 3
-          dir_names_exclude_current_dir: "true"
-          dir_names: "true"
           files: |
-            charts/argocd-apps/**
-            charts/**/templates/**/*.yaml
+            charts/**/Chart.yaml
+            charts/**/templates/**
 
       - name: Helm Deps
         run: |
@@ -128,8 +125,8 @@ jobs:
           IFS=' ' read -r -a FILES <<< "${ALL_CHANGED_FILES:-}"
 
           for file in "${FILES[@]}"; do
-            [ -f "$file" ] || continue
             path="$file"
+            # Walk up until Chart.yaml found
             while [ "$path" != "." ] && [ "$path" != "/" ]; do
               if [[ "$path" == charts/* ]] && [ -f "$path/Chart.yaml" ]; then
                 add_chart_dir "$path"
@@ -180,6 +177,9 @@ jobs:
           echo "CR Index"
           if [ "$(ls -A .cr-release-packages)" ]; then
             retry cr index -o "hamishfor" -r "helm-charts" --push --packages-with-index --index-path .
+          else
+            echo "No new packages; skipping index."
+          fi
           else
             echo "No new packages; skipping index."
           fi
