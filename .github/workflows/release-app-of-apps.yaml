@@ -2,6 +2,7 @@ name: Release App of Apps Chart
 
 concurrency:
   group: ${{ github.workflow }}
+  cancel-in-progress: true
 
 on:
   push:
@@ -12,16 +13,18 @@ jobs:
   release:
     permissions:
       contents: write
+      packages: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2 pinned
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4 pinned
         with:
           node-version: 20
+          cache: npm
 
       - name: Configure Git
         run: |
@@ -54,14 +57,30 @@ jobs:
 
       - name: Helm Deps
         run: |
+          set -euo pipefail
+          retry() {
+            local n=0
+            local max=5
+            local delay=2
+            until "$@"; do
+              n=$((n+1))
+              if [ $n -ge $max ]; then
+                echo "Command failed after $n attempts: $*"
+                return 1
+              fi
+              sleep $delay
+              delay=$((delay*2))
+            done
+          }
+
           ITER=0
           for dir in $(find charts -name Chart.lock -exec dirname {} \;); do
             pushd "$dir"
             for url in $(grep repository Chart.yaml | awk '{print $2}' | sort | uniq); do
-              helm repo add repo${ITER} ${url}
+              retry helm repo add repo${ITER} ${url}
               ITER=$(expr $ITER + 1)
             done
-            helm dependency build
+            retry helm dependency build
             popd
           done
 
@@ -72,34 +91,84 @@ jobs:
           CR_TOKEN: "${{ secrets.CR_TOKEN_2 }}"
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          npm ci
+          set -euo pipefail
+
+          retry() {
+            local n=0
+            local max=5
+            local delay=2
+            until "$@"; do
+              n=$((n+1))
+              if [ $n -ge $max ]; then
+                echo "Command failed after $n attempts: $*"
+                return 1
+              fi
+              sleep $delay
+              delay=$((delay*2))
+            done
+          }
+
+          retry npm ci
           mkdir -p .cr-release-packages
 
-          # Extract unique chart directories
+          # Extract unique chart directories robustly (supports nested paths)
           declare -A CHART_DIRS
-          IFS=' ' read -r -a FILES <<< "$ALL_CHANGED_FILES"
+          IFS=' ' read -r -a FILES <<< "${ALL_CHANGED_FILES:-}"
 
           for file in "${FILES[@]}"; do
-            chart_dir=$(echo "$file" | awk -F'/' '{print $2}')
-            if [[ -d "charts/$chart_dir" ]]; then
-              CHART_DIRS["$chart_dir"]=1
-            fi
+            [ -f "$file" ] || continue
+            path="$file"
+            while [ "$path" != "." ] && [ "$path" != "/" ]; do
+              if [[ "$path" == charts/* ]] && [ -f "$path/Chart.yaml" ]; then
+                CHART_DIRS["$path"]=1
+                break
+              fi
+              path=$(dirname "$path")
+            done
           done
 
-          # Process each unique chart directory
+          if [ ${#CHART_DIRS[@]} -eq 0 ]; then
+            echo "No chart roots detected in changed files list; exiting."
+            exit 0
+          fi
+
           for dir in "${!CHART_DIRS[@]}"; do
-            pushd "charts/$dir"
+            echo "Processing chart: $dir"
+            pushd "$dir" >/dev/null
 
             cp -f ../../.github/cr.yaml ./
             cp -f ../../.github/release.config.cjs ./
-            ln -s ../../.cr-release-packages
+            rm -f .cr-release-packages || true
+            ln -sf ../../.cr-release-packages
 
-            export CHART_NAME=$(basename "$PWD")
-            npx semantic-release
+            # Build / verify dependencies first with retry
+            if [ -f Chart.yaml ]; then
+              ITER=0
+              for url in $(grep -E '^[[:space:]]*repository:' Chart.yaml | awk '{print $2}' | sort -u); do
+                retry helm repo add dep${ITER} "${url}" || true
+                ITER=$((ITER+1))
+              done
+              retry helm dependency build
+            fi
 
-            popd
+            export CHART_NAME
+            CHART_NAME=$(basename "$PWD")
+            # Semantic release decides next version
+            retry npx semantic-release
+
+            # Ensure no unexpected leftover modifications (defensive)
+            if ! git diff --quiet; then
+              echo "Unexpected uncommitted changes after semantic-release in $dir"
+              git status --short
+              exit 1
+            fi
+            popd >/dev/null
           done
 
           echo "CR Index"
-          [ "$(ls -A .cr-release-packages)" ] && cr index -o "hamishfor" -r "helm-charts" --push --packages-with-index --index-path .
-  
+          if [ "$(ls -A .cr-release-packages)" ]; then
+            retry cr index -o "hamishfor" -r "helm-charts" --push --packages-with-index --index-path .
+          else
+            echo "No new packages; skipping index."
+          fi
+
