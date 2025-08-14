@@ -53,7 +53,9 @@ jobs:
           dir_names_max_depth: 3
           dir_names_exclude_current_dir: "true"
           dir_names: "true"
-          files: charts/argocd-apps/**
+          files: |
+            charts/argocd-apps/**
+            charts/**/templates/**/*.yaml
 
       - name: Helm Deps
         run: |
