@@ -157,6 +157,14 @@ jobs:
             echo "Processing chart: $dir"
             pushd "$dir" >/dev/null
 
+            # Ensure we have the latest tags
+            git fetch --tags --force
+
+            CURRENT_VERSION="$(yq -r '.version' Chart.yaml)"
+            if git rev-parse -q --verify "refs/tags/${CHART_NAME}-v${CURRENT_VERSION}" >/dev/null; then
+              echo "Tag ${CHART_NAME}-v${CURRENT_VERSION} already exists. Will let semantic-release compute the next version."
+            fi
+
             cp -f ../../.github/cr.yaml ./
             cp -f ../../.github/release.config.cjs ./
             rm -f .cr-release-packages || true
