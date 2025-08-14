@@ -18,15 +18,20 @@ entries:
     version: 1.16.1
   - annotations:
       artifacthub.io/changes: |2
+         - "**app-of-apps:** immich ([c5059dc](https://github.com/hamishfor/helm-charts/commit/c5059dc76e32156f6206fb3959341ad2ae1fff3d))"
+         - "**app-of-apps:** immich ([8f74934](https://github.com/hamishfor/helm-charts/commit/8f749349ac992e04829dea52437219d472bffcd7))"
+         - "**app-of-apps:** immich ([0b35a4d](https://github.com/hamishfor/helm-charts/commit/0b35a4de0d81c0b98c584f8a9567c273998df49f))"
+         - "**app-of-apps:** immich ([c31a130](https://github.com/hamishfor/helm-charts/commit/c31a130bf74c2e8ba293d90a55cb2caa4f9af91f))"
+         - "**app-of-apps:** immich ([e538c83](https://github.com/hamishfor/helm-charts/commit/e538c83c1a8e07020234ff55380fcbcf457d2db8))"
          - "**immich:** chart name ([056f3e7](https://github.com/hamishfor/helm-charts/commit/056f3e785149225f933e29d4f3793c5a1f3c4a67))"
          - "**immich:** init ([4bda44f](https://github.com/hamishfor/helm-charts/commit/4bda44f4313d259aa50e8532a21c9bab6d157e14))"
          - "**immich:** versions ([59c6f41](https://github.com/hamishfor/helm-charts/commit/59c6f41815d962d914f27c3c414610a88651979b))"
          - "**kubernetes-dashboard:** release ([bb3d0ac](https://github.com/hamishfor/helm-charts/commit/bb3d0ac0d8c85b71108b47bce9fedb53b1594715))"
     apiVersion: v2
     appVersion: "1.0"
-    created: "2025-08-14T08:55:42.573320387Z"
+    created: "2025-08-14T09:00:50.652004041Z"
     description: Applications
-    digest: ac082f3d0a396a96d2fc2b8c4a3ec338d3f3ce1980c006fd94caff09d107965d
+    digest: de8406ff49a0ffced1566ba0c119c0dbd5084c7f62f390dc1b38de1425b53c77
     name: applications
     type: application
     urls:
@@ -591,13 +596,13 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 2.1.1-r8-ls262
-    created: "2025-08-14T08:55:42.576137813Z"
+    created: "2025-08-14T09:00:50.65574666Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
       version: 4.5.2
     description: Deluge is a torrent download client
-    digest: f9918c8fef2eb4513fde1b1a6a08919b5c5915d42565e5a7f1b321725a286b0d
+    digest: 0736c8792f042cd10bce7a61dc4a634b1c450abb78db76bd2d6172c66bfb2827
     home: https://github.com/hamishfor/helm-charts/tree/main/charts/deluge
     icon: https://avatars2.githubusercontent.com/u/6733935?v=3&s=200
     keywords:
@@ -650,13 +655,13 @@ entries:
   immich:
   - apiVersion: v2
     appVersion: 0.9.3
-    created: "2025-08-14T08:55:42.59054516Z"
+    created: "2025-08-14T09:00:50.669452648Z"
     dependencies:
     - name: immich
       repository: https://immich-app.github.io/immich-charts
       version: 0.9.3
     description: Wrapper chart for Immich with custom configurations
-    digest: 71c55cbe93eb7a25026f0bace51f664e1d9a6503702f8f62baa114a02912efab
+    digest: 825271fbaf0fcdbe7733eaa2565a0dc1e1167e0e17336f2b06d8a809d1f9e4d1
     name: immich
     type: application
     urls:
@@ -797,13 +802,13 @@ entries:
          - "supabase ([ecd7dc3](https://github.com/hamishfor/helm-charts/commit/ecd7dc3a76e1ea973dd2d61ef7a63b910606f12b))"
          - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
     apiVersion: v2
-    created: "2025-08-14T08:55:42.593443398Z"
+    created: "2025-08-14T09:00:50.673067114Z"
     description: The open source Firebase alternative.
-    digest: 5ee2a2cd96e3ef3e907c812b2356c8d69e2d4fe541fc09c8ae13212a7fa36618
+    digest: c7c63aaa4f62246d8308e7a42ce5d900e405e96a4d3be537d2f7f454cc526210
     icon: https://avatars.githubusercontent.com/u/54469796?s=280&v=4
     name: supabase
     type: application
     urls:
     - https://hamishfor.github.io/helm-charts/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2025-08-14T08:55:42.572204321Z"
+generated: "2025-08-14T09:00:50.651382724Z"
