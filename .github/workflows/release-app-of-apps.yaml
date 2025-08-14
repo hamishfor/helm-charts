@@ -156,6 +156,8 @@ jobs:
           for dir in "${CHART_DIRS[@]}"; do
             echo "Processing chart: $dir"
             pushd "$dir" >/dev/null
+            CHART_NAME="$(basename "$PWD")"
+            export CHART_NAME
 
             # Ensure we have the latest tags
             git fetch --tags --force
@@ -180,8 +182,6 @@ jobs:
               retry helm dependency build
             fi
 
-            export CHART_NAME
-            CHART_NAME=$(basename "$PWD")
             # Semantic release decides next version
             retry npx semantic-release
 
