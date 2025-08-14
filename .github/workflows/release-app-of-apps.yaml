@@ -51,8 +51,7 @@ jobs:
         uses: tj-actions/changed-files@v43
         with:
           files: |
-            charts/**/Chart.yaml
-            charts/**/templates/**
+            charts/argocd-apps/**
 
       - name: Helm Deps
         run: |
@@ -89,6 +88,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CR_TOKEN_2 }}
           CR_TOKEN: "${{ secrets.CR_TOKEN_2 }}"
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          ALLOWED_CHARTS: "argocd-apps"
         run: |
           set -euo pipefail
 
@@ -136,8 +136,20 @@ jobs:
             done
           done
 
+          # Filter to allowed charts only
+          FILTERED=()
+          for dir in "${CHART_DIRS[@]}"; do
+            name="$(basename "$dir")"
+            if [[ " ${ALLOWED_CHARTS} " == *" ${name} "* ]]; then
+              FILTERED+=("$dir")
+            else
+              echo "Skipping chart not in allow list: $name"
+            fi
+          done
+          CHART_DIRS=("${FILTERED[@]}")
+
           if [ "${#CHART_DIRS[@]}" -eq 0 ]; then
-            echo "No chart roots detected in changed files list; exiting."
+            echo "No allowed chart roots detected; exiting."
             exit 0
           fi
 
@@ -176,11 +188,35 @@ jobs:
 
           echo "CR Index"
           if [ "$(ls -A .cr-release-packages)" ]; then
-            retry cr index -o "hamishfor" -r "helm-charts" --push --packages-with-index --index-path .
+            # Retry merge/publish of index to handle possible races / drift on gh-pages
+            attempt=1
+            max=5
+            while [ $attempt -le $max ]; do
+              echo "Index update attempt $attempt/$max"
+              # Fetch latest gh-pages branch (do not fail if it does not exist yet)
+              git fetch origin gh-pages:gh-pages || true
+              # Bring existing index.yaml (if any) into workspace so cr can merge
+              git show gh-pages:index.yaml > index.yaml 2>/dev/null || true
+              if cr index \
+                  -o "hamishfor" \
+                  -r "helm-charts" \
+                  --pages-branch gh-pages \
+                  --index-path index.yaml \
+                  --package-path .cr-release-packages \
+                  --push; then
+                echo "Index updated successfully."
+                break
+              fi
+              echo "Index update failed. Refetching and retrying..."
+              attempt=$((attempt+1))
+              sleep 5
+              # Clean up partial index to avoid stale state
+              rm -f index.yaml
+            done
+            if [ $attempt -gt $max ]; then
+              echo "Failed to update index after $max attempts."
+              exit 1
+            fi
           else
             echo "No new packages; skipping index."
           fi
-          else
-            echo "No new packages; skipping index."
-          fi
-
