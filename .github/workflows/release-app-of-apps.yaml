@@ -112,7 +112,17 @@ jobs:
           mkdir -p .cr-release-packages
 
           # Extract unique chart directories robustly (supports nested paths)
-          declare -A CHART_DIRS
+          CHART_DIRS=()
+          add_chart_dir() {
+            local candidate="$1"
+            for existing in "${CHART_DIRS[@]}"; do
+              if [ "$existing" = "$candidate" ]; then
+                return 0
+              fi
+            done
+            CHART_DIRS+=("$candidate")
+          }
+
           IFS=' ' read -r -a FILES <<< "${ALL_CHANGED_FILES:-}"
 
           for file in "${FILES[@]}"; do
@@ -120,19 +130,19 @@ jobs:
             path="$file"
             while [ "$path" != "." ] && [ "$path" != "/" ]; do
               if [[ "$path" == charts/* ]] && [ -f "$path/Chart.yaml" ]; then
-                CHART_DIRS["$path"]=1
+                add_chart_dir "$path"
                 break
               fi
               path=$(dirname "$path")
             done
           done
 
-          if [ ${#CHART_DIRS[@]} -eq 0 ]; then
+          if [ "${#CHART_DIRS[@]}" -eq 0 ]; then
             echo "No chart roots detected in changed files list; exiting."
             exit 0
           fi
 
-          for dir in "${!CHART_DIRS[@]}"; do
+          for dir in "${CHART_DIRS[@]}"; do
             echo "Processing chart: $dir"
             pushd "$dir" >/dev/null
 
