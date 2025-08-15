@@ -7,7 +7,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "5"
 spec:
-  imageName: ghcr.io/tensorchord/cloudnative-pgvecto.rs:16.9-v0.4.0@sha256:d92dedeeb2c1c70110b72270e3f5ba90f222dcc6fb93988d9adb4d0da15a6a9d
+  imageName: ghcr.io/immich-app/postgres:17-vectorchord0.4.3-pgvectors0.3.0
   instances: 1
   postgresql:
     shared_preload_libraries:
