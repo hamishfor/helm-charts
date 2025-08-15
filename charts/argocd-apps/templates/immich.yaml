@@ -15,7 +15,7 @@ spec:
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://cloudnative-pg.github.io/charts
       chart: cloudnative-pg
-      targetRevision: 1.27.0
+      targetRevision: 0.26.0
     - repoURL: https://hamishfor.github.io/helm-charts
       targetRevision: 0.1.12
       chart: immich
