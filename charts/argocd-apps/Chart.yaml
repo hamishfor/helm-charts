@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.16.7
+version: 1.16.8
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,5 +23,4 @@ version: 1.16.7
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "**immich:** secret ([06db32e](https://github.com/hamishfor/helm-charts/commit/06db32e732e8edd1f90fce954ca7d985afbb6934))"
-     - "**immich:** secret data type ([0ad7d57](https://github.com/hamishfor/helm-charts/commit/0ad7d57dea301644006b64f372da81f5140a9512))"
+     - "**immich:** stringData ([4003ad8](https://github.com/hamishfor/helm-charts/commit/4003ad87037125709a69e19251a2c67c2c469194))"
