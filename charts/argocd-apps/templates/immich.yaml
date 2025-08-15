@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: immich
     server: {{ .Values.spec.destination.server }}
-  source:
+  sources:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
