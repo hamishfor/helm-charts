@@ -295,7 +295,7 @@ entries:
       version: 1.6.10
     - annotations:
         artifacthub.io/changes: |2
-         - "values.yaml -> values.yml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
+         - "values.yaml -> values.yaml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
       apiVersion: v2
       appVersion: "1.0"
       created: "2024-07-15T02:14:11.038490031Z"
@@ -494,7 +494,7 @@ entries:
          - "update prometheus to correct chart version ([3d70dd3](https://github.com/hamishfor/helm-charts/commit/3d70dd3e04123582fbf5079d9cc0301bfe3e6796))"
          - "values reference var ([719e9b2](https://github.com/hamishfor/helm-charts/commit/719e9b21e04b9d33ff26f9c61d9ef0c25c749d66))"
          - "values repo revision ([1b49259](https://github.com/hamishfor/helm-charts/commit/1b492595280bc339815c9c35961bf01b505f9c17))"
-         - "values.yaml -> values.yml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
+         - "values.yaml -> values.yaml ([15877d2](https://github.com/hamishfor/helm-charts/commit/15877d2572d16b33f1f9feca5b2e6ac12c72dd8b))"
          - "web = http ([158f8c3](https://github.com/hamishfor/helm-charts/commit/158f8c31b3f3ecbaaa7ab2fd54e8432b0d352259))"
          - "-flame ([b9aa965](https://github.com/hamishfor/helm-charts/commit/b9aa965db0d8bd57bdda2446cd4de1639422fbe1))"
          - "1.5.0 ([0a80106](https://github.com/hamishfor/helm-charts/commit/0a8010630c3a9b85a1411fba09cc12bcbd9fea24))"

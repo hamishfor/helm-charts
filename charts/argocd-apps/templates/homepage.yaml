@@ -18,7 +18,7 @@ spec:
       chart: homepage
       helm:
         valueFiles:
-          - $values_repo/charts/homepage/values.yml
+          - $values_repo/charts/homepage/values.yaml
   project: default
   syncPolicy:
     automated:

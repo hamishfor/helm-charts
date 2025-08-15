@@ -20,13 +20,13 @@ spec:
       targetRevision: 0.26.0
       helm:
         valuesFiles:
-          - $values_repo/charts/cloudnative-pg/values.yml
+          - $values_repo/charts/cloudnative-pg/values.yaml
     - repoURL: https://hamishfor.github.io/helm-charts
       targetRevision: 0.1.19
       chart: immich
       helm:
         valueFiles:
-          - $values_repo/charts/immich/values.yml
+          - $values_repo/charts/immich/values.yaml
   ignoreDifferences:
     - group: admissionregistration.k8s.io
       kind: MutatingWebhookConfiguration

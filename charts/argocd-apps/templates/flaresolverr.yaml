@@ -18,7 +18,7 @@ spec:
       chart: flaresolverr
       helm:
         valueFiles:
-          - $values_repo/charts/flaresolverr/values.yml
+          - $values_repo/charts/flaresolverr/values.yaml
   project: default
   syncPolicy:
     automated:

@@ -18,7 +18,7 @@ spec:
       chart: prowlarr
       helm:
         valueFiles:
-          - $values_repo/charts/prowlarr/values.yml
+          - $values_repo/charts/prowlarr/values.yaml
   project: default
   syncPolicy:
     automated:

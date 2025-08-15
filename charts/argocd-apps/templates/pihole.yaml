@@ -18,7 +18,7 @@ spec:
       chart: pihole
       helm:
         valueFiles:
-          - $values_repo/charts/pihole/values.yml
+          - $values_repo/charts/pihole/values.yaml
   project: default
   syncPolicy:
     automated:

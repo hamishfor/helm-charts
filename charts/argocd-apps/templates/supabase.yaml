@@ -18,7 +18,7 @@ spec:
       chart: supabase
       helm:
         valueFiles:
-          - $values_repo/charts/supabase/values.yml
+          - $values_repo/charts/supabase/values.yaml
   project: default
   syncPolicy:
     automated:

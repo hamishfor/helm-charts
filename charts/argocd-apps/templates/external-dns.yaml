@@ -18,7 +18,7 @@ spec:
       chart: external-dns
       helm:
         valueFiles:
-          - $values_repo/charts/external-dns/values.yml
+          - $values_repo/charts/external-dns/values.yaml
   project: default
   syncPolicy:
     automated:
