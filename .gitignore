@@ -1,7 +1,7 @@
-charts/*/charts
 .bin/
-
+*.DS_Store
 
 # Chart dependencies
-**/charts/*.tgz
 *Chart.lock
+charts/*/charts/*
+!charts/local-path-provisioner/charts/*.tgz

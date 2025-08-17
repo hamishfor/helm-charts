@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: local-path-provisioner
-  namespace: argocd
+  namespace: argocd 
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: 0.0.32
+      targetRevision: 0.1.0
       chart: local-path-provisioner
       helm:
         valueFiles:
