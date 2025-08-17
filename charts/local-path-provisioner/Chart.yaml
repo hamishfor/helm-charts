@@ -7,5 +7,5 @@ appVersion: "v0.0.32"
 
 dependencies:
   - name: local-path-provisioner
-    repository: local-path-provisioner
+    repository: file://local-path-provisioner-0.0.32.tgz
     version: "0.0.32"
