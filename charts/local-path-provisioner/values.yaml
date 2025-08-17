@@ -1,0 +1,6 @@
+local-path-provisioner:
+  replicaCount: 1
+  storageClass:
+    defaultClass: true
+    name: local-path
+    reclaimPolicy: Delete
