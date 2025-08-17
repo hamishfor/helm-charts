@@ -1,4 +1,3 @@
-
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
@@ -7,7 +6,9 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "5"
 spec:
-  imageName: ghcr.io/immich-app/postgres:17-vectorchord0.4.3-pgvectors0.3.0
+  {{- if .Values.immich.postgres.cluster.imageName }}
+  imageName: {{ .Values.immich.postgres.cluster.imageName | quote }}
+  {{- end }}
   instances: 1
   postgresql:
     shared_preload_libraries:
