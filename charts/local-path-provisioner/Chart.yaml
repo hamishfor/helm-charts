@@ -4,3 +4,8 @@ description: Wrapper chart for local-path-provisioner with custom configurations
 type: application
 version: 0.1.0
 appVersion: "v0.0.32"
+
+dependencies:
+  - name: local-path-provisioner
+    chart: local-path-provisioner
+    version: "0.0.32"
