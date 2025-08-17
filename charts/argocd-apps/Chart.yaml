@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.17.3
+version: 1.17.4
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,4 +23,4 @@ version: 1.17.3
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "**immich:** custom pg image ([bc6543a](https://github.com/hamishfor/helm-charts/commit/bc6543a2e1175313be5860937421c6005c354040))"
+     - "**immich:** postgres values ([790d616](https://github.com/hamishfor/helm-charts/commit/790d61697165ec98d53926767e5ee04a477c43aa))"
