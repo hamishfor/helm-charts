@@ -3,7 +3,7 @@ apiVersion: v2
 name: immich
 description: Wrapper chart for Immich with custom configurations
 type: application
-version: 0.1.22
+version: 0.1.23
 appVersion: "0.9.3"
 
 dependencies:
