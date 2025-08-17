@@ -1,7 +1,10 @@
 .bin/
 *.DS_Store
 
+
 # Chart dependencies
 *Chart.lock
 charts/*/charts/*
 !charts/local-path-provisioner/charts/*
+
+*node_modules
