@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.17.2
+version: 1.17.3
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -23,10 +23,4 @@ version: 1.17.2
 appVersion: "1.0"
 annotations:
   artifacthub.io/changes: >2
-     - "**immich:** remove local-path provisioner ([939b15f](https://github.com/hamishfor/helm-charts/commit/939b15f06998aa0ba4f34f3b6d4a64739a0386d2))"
-     - "**local-path-provisioner:** add a values ([2fa6e4e](https://github.com/hamishfor/helm-charts/commit/2fa6e4ea9ea61f63caa9875dd12384ea65f06922))"
-     - "**local-path-provisioner:** add extracted helm chart ([8da8a4b](https://github.com/hamishfor/helm-charts/commit/8da8a4b017772df231e1038b882e617021645eff))"
-     - "**local-path-provisioner:** chart / repository ([e51b8d6](https://github.com/hamishfor/helm-charts/commit/e51b8d6f33d2fe2d01b2394553ebc9b9777bbb1a))"
-     - "**local-path-provisioner:** dependancy ([bb09ebf](https://github.com/hamishfor/helm-charts/commit/bb09ebf4888994a5095c8370589b01d50ee7d396))"
-     - "**local-path-provisioner:** repositry file path ([eb3bb8b](https://github.com/hamishfor/helm-charts/commit/eb3bb8b799c1b02b19fcf80ce99fb0d3e7cc775f))"
-     - "**local-path-provisioner:** respository file path ([b7c3f53](https://github.com/hamishfor/helm-charts/commit/b7c3f5391f8e61696968f187102a98707ae52e5c))"
+     - "**immich:** custom pg image ([bc6543a](https://github.com/hamishfor/helm-charts/commit/bc6543a2e1175313be5860937421c6005c354040))"
