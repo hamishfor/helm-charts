@@ -8,3 +8,8 @@ charts/*/charts/*
 !charts/local-path-provisioner/charts/*
 
 *node_modules
+*.cr-release-packages/
+*.cr-release-packages
+*CHANGELOG.md
+*cr.yaml
+*release.config.cjs

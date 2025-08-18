@@ -28,4 +28,4 @@ spec:
         - CREATE EXTENSION IF NOT EXISTS "earthdistance" CASCADE;
   storage:
     size: 4Gi
-    storageClass: local-storage
+    storageClass: local-path
