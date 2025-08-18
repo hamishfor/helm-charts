@@ -22,7 +22,7 @@ spec:
         valueFiles:
           - $values_repo/charts/cloudnative-pg/values.yaml
     - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: 0.1.27
+      targetRevision: 0.1.28
       chart: immich
       helm:
         valueFiles:
