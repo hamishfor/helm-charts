@@ -1,28 +1,28 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: supabase
-  namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: supabase
-    server: {{ .Values.spec.destination.server }}
-  sources:
-    - repoURL: {{ .Values.spec.source.repoURL }}
-      targetRevision: {{ .Values.spec.source.targetRevision }}
-      ref: {{ .Values.spec.source.ref }}
-    - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: "0.1.3"
-      chart: supabase
-      helm:
-        valueFiles:
-          - $values_repo/charts/supabase/values.yaml
-  project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: supabase
+#   namespace: argocd
+#   finalizers:
+#   - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     namespace: supabase
+#     server: {{ .Values.spec.destination.server }}
+#   sources:
+#     - repoURL: {{ .Values.spec.source.repoURL }}
+#       targetRevision: {{ .Values.spec.source.targetRevision }}
+#       ref: {{ .Values.spec.source.ref }}
+#     - repoURL: https://hamishfor.github.io/helm-charts
+#       targetRevision: "0.1.3"
+#       chart: supabase
+#       helm:
+#         valueFiles:
+#           - $values_repo/charts/supabase/values.yaml
+#   project: default
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
