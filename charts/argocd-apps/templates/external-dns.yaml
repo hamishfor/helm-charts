@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://kubernetes-sigs.github.io/external-dns/
-      targetRevision: "1.15.1"
+      targetRevision: "1.17.0"
       chart: external-dns
       helm:
         valueFiles:
