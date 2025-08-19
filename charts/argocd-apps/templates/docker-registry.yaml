@@ -1,28 +1,28 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: docker-registry
-  namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: docker-registry
-    server: {{ .Values.spec.destination.server }}
-  sources:
-    - repoURL: {{ .Values.spec.source.repoURL }}
-      targetRevision: {{ .Values.spec.source.targetRevision }}
-      ref: {{ .Values.spec.source.ref }}
-    - repoURL: https://helm.twun.io/
-      targetRevision: "v2.2.3"
-      chart: docker-registry
-      helm:
-        valueFiles:
-          - $values_repo/charts/docker-registry/values.yaml
-  project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: docker-registry
+#   namespace: argocd
+#   finalizers:
+#   - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     namespace: docker-registry
+#     server: {{ .Values.spec.destination.server }}
+#   sources:
+#     - repoURL: {{ .Values.spec.source.repoURL }}
+#       targetRevision: {{ .Values.spec.source.targetRevision }}
+#       ref: {{ .Values.spec.source.ref }}
+#     - repoURL: https://helm.twun.io/
+#       targetRevision: "v2.2.3"
+#       chart: docker-registry
+#       helm:
+#         valueFiles:
+#           - $values_repo/charts/docker-registry/values.yaml
+#   project: default
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
