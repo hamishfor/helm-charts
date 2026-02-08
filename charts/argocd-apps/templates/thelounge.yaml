@@ -14,7 +14,7 @@ spec:
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
     - repoURL: https://geek-cookbook.github.io/charts/
-      targetRevision: "4.5.2"
+      targetRevision: "3.4.2"
       chart: thelounge
       helm:
         valueFiles:
