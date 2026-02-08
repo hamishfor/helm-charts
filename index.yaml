@@ -6,9 +6,9 @@ entries:
          - "**thelounge:** Adding thelounge ([ea84c2b](https://github.com/hamishfor/helm-charts/commit/ea84c2b33e81aec3c40189a88931a7e9f65064e1))"
     apiVersion: v2
     appVersion: "1.0"
-    created: "2026-02-08T23:25:33.866800375Z"
+    created: "2026-02-08T23:28:50.784857145Z"
     description: Applications
-    digest: c4180fdc759764dc9d4ad2b7a5ce1c949540c9782e31ae7072d4e80bc0e27819
+    digest: e443c7d36e15820b518dfe1269c8984d3fce0b7ae113caaa770b48a6c4ee48c5
     name: applications
     type: application
     urls:
@@ -883,13 +883,13 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 2.1.1-r8-ls262
-    created: "2026-02-08T23:25:33.870404716Z"
+    created: "2026-02-08T23:28:50.787389979Z"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
       version: 4.5.2
     description: Deluge is a torrent download client
-    digest: 1170fe7f8b514f2456907a0de80899f460615dd5da41c04b7c112cc5e61946f2
+    digest: bb7aa047c2400d7e3d18d8ebbb73bb8ec65aa4b41c35d1b93bcf740ce3000b33
     home: https://github.com/hamishfor/helm-charts/tree/main/charts/deluge
     icon: https://avatars2.githubusercontent.com/u/6733935?v=3&s=200
     keywords:
@@ -942,13 +942,13 @@ entries:
   immich:
   - apiVersion: v2
     appVersion: 0.9.3
-    created: "2026-02-08T23:25:33.883900403Z"
+    created: "2026-02-08T23:28:50.801298414Z"
     dependencies:
     - name: immich
       repository: https://immich-app.github.io/immich-charts
       version: 0.9.3
     description: Wrapper chart for Immich with custom configurations
-    digest: ca353fb04d7a7d8c8be176ba47489b4cfd210b0b8be8f374ccf424ce6f10de36
+    digest: 6e9ce4269f86f1ad2f48058e9d5d72803cf5db352ea78e136eba334c26a591cb
     name: immich
     type: application
     urls:
@@ -1321,13 +1321,13 @@ entries:
   local-path-provisioner:
   - apiVersion: v2
     appVersion: v0.0.32
-    created: "2026-02-08T23:25:33.885001426Z"
+    created: "2026-02-08T23:28:50.801905005Z"
     dependencies:
     - name: local-path-provisioner
       repository: file://charts/local-path-provisioner/
       version: 0.0.32
     description: Wrapper chart for local-path-provisioner with custom configurations
-    digest: 6b1850ce1e6a94708f1085619fb732e88df949d293423da7437285c194479f2d
+    digest: 5990794569a87476adc65e87c7c184cb5b714de2624bc3ce0bcfbb57e274c911
     name: local-path-provisioner
     type: application
     urls:
@@ -1370,13 +1370,13 @@ entries:
          - "supabase ([ecd7dc3](https://github.com/hamishfor/helm-charts/commit/ecd7dc3a76e1ea973dd2d61ef7a63b910606f12b))"
          - "upgrade flame ([cafe9a4](https://github.com/hamishfor/helm-charts/commit/cafe9a490735df02f158df71de968003a68d0505))"
     apiVersion: v2
-    created: "2026-02-08T23:25:33.888220928Z"
+    created: "2026-02-08T23:28:50.805929454Z"
     description: The open source Firebase alternative.
-    digest: 62cbd3a512e70c49d93a68e609d6805b263c3b626591f26fd841fc8639b1f714
+    digest: 6b1c0474e58d5e489447f672aa22e0b3139c05e9117fd14686d5868c99b4346a
     icon: https://avatars.githubusercontent.com/u/54469796?s=280&v=4
     name: supabase
     type: application
     urls:
     - https://hamishfor.github.io/helm-charts/supabase-0.1.3.tgz
     version: 0.1.3
-generated: "2026-02-08T23:25:33.866308818Z"
+generated: "2026-02-08T23:28:50.784406229Z"
