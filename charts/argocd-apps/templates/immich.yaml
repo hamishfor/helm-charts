@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: immich
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-options: ServerSideApply=true
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -22,7 +20,7 @@ spec:
         valueFiles:
           - $values_repo/charts/cloudnative-pg/values.yaml
     - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: 0.1.28
+      targetRevision: 0.1.29
       chart: immich
       helm:
         valueFiles:
@@ -46,4 +44,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - ServerSideApply=true
