@@ -1,41 +1,55 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":semanticCommits",
     ":semanticCommitTypeAll(feat)"
   ],
-  "bumpVersion": "patch",
   "ignoreDeps": [
     "postgresql",
     "redis"
   ],
-  "regexManagers": [
+  "packageRules": [
     {
+      "matchManagers": ["helmv3", "helm-values"],
+      "postUpgradeTasks": {
+        "commands": [
+          "bash -c 'cd {{{parentDir}}} && VERSION=$(grep \"^version:\" Chart.yaml | awk \"{print \\$2}\") && IFS=. read -r MAJOR MINOR PATCH <<< \"$VERSION\" && PATCH=$((PATCH+1)) && sed -i \"s/^version: .*/version: $MAJOR.$MINOR.$PATCH/\" Chart.yaml'"
+        ],
+        "fileFilters": ["charts/**/Chart.yaml"]
+      }
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
       "fileMatch": [
-        "^charts/.*/Chart.yaml$"
+        "^charts/.+/Chart\\.yaml$"
       ],
       "matchStrings": [
-        "image:\\s+\"(?<depName>[a-z/.-]+):(?<currentValue>[a-z0-9.-@]+)\""
+        "image:\\s+\"(?<depName>[a-zA-Z0-9/._-]+):(?<currentValue>[a-zA-Z0-9._@:-]+)\""
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
     },
     {
+      "customType": "regex",
       "fileMatch": [
-        "^charts/.*/values.yaml$"
+        "^charts/.+/values\\.yaml$"
       ],
       "matchStrings": [
-        "\\s+repository:\\s+\"?(?<depName>[a-z/.-]+)\"?\\n\\s+tag:\\s+\"?(?<currentValue>[a-z0-9.-@:]+)\"?"
+        "\\s+repository:\\s+\"?(?<depName>[a-zA-Z0-9/._-]+)\"?\\n\\s+tag:\\s+\"?(?<currentValue>[a-zA-Z0-9._@:-]+)\"?"
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
     },
     {
+      "customType": "regex",
       "fileMatch": [
-        "^charts/.*/Chart.yaml$"
+        "^charts/.+/Chart\\.yaml$"
       ],
       "matchStrings": [
-        "# image: \"(?<depName>[a-z/.-]+)\"\nappVersion:\\s+(?<currentValue>v[a-z0-9.-]+)"
+        "# image: \"(?<depName>[a-zA-Z0-9/._-]+)\"\\nappVersion:\\s+\"?(?<currentValue>v?[a-zA-Z0-9._-]+)\"?"
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"

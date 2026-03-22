@@ -6,9 +6,13 @@ on:
 
 jobs:
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+        with:
+          fetch-depth: 0
       - name: Publish Helm charts
         uses: stefanprodan/helm-gh-pages@v1.7.0
         with:
