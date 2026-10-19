@@ -1,24 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kubernetes-dashboard
-  namespace: kubernetes-dashboard
+  name: headlamp
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: kubernetes-dashboard
+    namespace: headlamp
     server: {{ .Values.spec.destination.server }}
   sources:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
-    - repoURL: https://kubernetes.github.io/dashboard/
-      targetRevision: "7.13.0"
-      chart: kubernetes-dashboard
+    - repoURL: https://kubernetes-sigs.github.io/headlamp/
+      targetRevision: "0.46.0"
+      chart: headlamp
       helm:
         valueFiles:
-          - $values_repo/charts/kubernetes-dashboard/values.yaml
+          - $values_repo/charts/headlamp/values.yaml
   project: default
   syncPolicy:
     automated:
