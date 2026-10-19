@@ -1,6 +1,6 @@
 # immich
 
-![Version: 0.1.29](https://img.shields.io/badge/Version-0.1.29-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.9.3](https://img.shields.io/badge/AppVersion-0.9.3-informational?style=flat-square)
+![Version: 0.1.30](https://img.shields.io/badge/Version-0.1.30-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.9.3](https://img.shields.io/badge/AppVersion-0.9.3-informational?style=flat-square)
 
 Wrapper chart for Immich with custom configurations
 
@@ -8,7 +8,7 @@ Wrapper chart for Immich with custom configurations
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://immich-app.github.io/immich-charts | immich | 0.9.3 |
+| oci://ghcr.io/immich-app/immich-charts | immich | 0.9.3 |
 
 ## Values
 
