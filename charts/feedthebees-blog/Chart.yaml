@@ -1,0 +1,16 @@
+apiVersion: v2
+name: feedthebees-blog
+description: Static Astro blog for feedthebees.site, served by unprivileged nginx
+type: application
+version: 0.1.0
+appVersion: "latest"
+kubeVersion: ">=1.19.0-0"
+keywords:
+  - blog
+  - astro
+home: https://github.com/hamishfor/helm-charts/tree/main/charts/feedthebees-blog
+sources:
+  - https://github.com/hamishfor/feedthebees-blog
+maintainers:
+  - name: hamishfor
+    email: hamishfor@gmail.com

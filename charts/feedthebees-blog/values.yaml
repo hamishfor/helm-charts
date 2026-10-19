@@ -1,0 +1,92 @@
+# Default values for feedthebees-blog.
+
+# -- Number of replicas; the pod is stateless so this can be scaled freely
+replicaCount: 2
+
+image:
+  # -- Image repository, built by the feedthebees-blog repo's release workflow
+  repository: ghcr.io/hamishfor/feedthebees-blog
+  # -- Image tag, defaults to the chart appVersion. Use the short commit sha of a build
+  tag: ""
+  # -- Image pull policy
+  pullPolicy: IfNotPresent
+
+# -- Image pull secrets, needed if the ghcr.io package is private
+imagePullSecrets: []
+
+# -- Override the chart name
+nameOverride: ""
+# -- Override the full resource name
+fullnameOverride: ""
+
+# -- Annotations to add to the pod
+podAnnotations: {}
+
+# -- Pod security context
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 101
+  runAsGroup: 101
+  fsGroup: 101
+  seccompProfile:
+    type: RuntimeDefault
+
+# -- Container security context
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+service:
+  # -- Service type
+  type: ClusterIP
+  # -- Service port
+  port: 80
+
+ingress:
+  # -- Enable the ingress
+  enabled: false
+  # -- Ingress class name
+  className: nginx
+  # -- Ingress annotations
+  annotations: {}
+  # -- Ingress hosts
+  hosts:
+    - host: blog.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  # -- Ingress TLS configuration
+  tls: []
+
+probes:
+  # -- HTTP path for the liveness and readiness probes, served by the image's nginx.conf
+  path: /healthz
+
+# -- Container resources
+resources:
+  requests:
+    cpu: 10m
+    memory: 16Mi
+  limits:
+    memory: 64Mi
+
+podDisruptionBudget:
+  # -- Create a PodDisruptionBudget
+  enabled: true
+  # -- Minimum available pods
+  minAvailable: 1
+
+# -- Node selector
+nodeSelector: {}
+
+# -- Tolerations
+tolerations: []
+
+# -- Affinity
+affinity: {}
+
+# -- Topology spread constraints, defaults to spreading replicas across nodes
+topologySpreadConstraints: []
