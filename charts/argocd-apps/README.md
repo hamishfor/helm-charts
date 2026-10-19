@@ -8,6 +8,8 @@ Applications
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| spec.chartsSource.repoURL | string | `"git@github.com:hamishfor/helm-charts.git"` |  |
+| spec.chartsSource.targetRevision | string | `"main"` |  |
 | spec.destination.server | string | `"https://kubernetes.default.svc"` |  |
 | spec.source.ref | string | `"values_repo"` |  |
 | spec.source.repoURL | string | `"git@github.com:hamishfor/helm-values.git"` |  |

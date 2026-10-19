@@ -21,9 +21,9 @@ spec:
       helm:
         valueFiles:
           - $values_repo/charts/cloudnative-pg/values.yaml
-    - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: 0.1.29
-      chart: immich
+    - repoURL: {{ .Values.spec.chartsSource.repoURL }}
+      targetRevision: {{ .Values.spec.chartsSource.targetRevision }}
+      path: charts/immich
       helm:
         valueFiles:
           - $values_repo/charts/immich/values.yaml

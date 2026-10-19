@@ -11,13 +11,9 @@
   ],
   "packageRules": [
     {
+      "description": "Bump the chart version so the release workflow publishes the update",
       "matchManagers": ["helmv3", "helm-values"],
-      "postUpgradeTasks": {
-        "commands": [
-          "bash -c 'cd {{{parentDir}}} && VERSION=$(grep \"^version:\" Chart.yaml | awk \"{print \\$2}\") && IFS=. read -r MAJOR MINOR PATCH <<< \"$VERSION\" && PATCH=$((PATCH+1)) && sed -i \"s/^version: .*/version: $MAJOR.$MINOR.$PATCH/\" Chart.yaml'"
-        ],
-        "fileFilters": ["charts/**/Chart.yaml"]
-      }
+      "bumpVersion": "patch"
     }
   ],
   "customManagers": [

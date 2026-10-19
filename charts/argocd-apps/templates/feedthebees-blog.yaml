@@ -13,9 +13,9 @@ spec:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
-    - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: "0.1.0"
-      chart: feedthebees-blog
+    - repoURL: {{ .Values.spec.chartsSource.repoURL }}
+      targetRevision: {{ .Values.spec.chartsSource.targetRevision }}
+      path: charts/feedthebees-blog
       helm:
         valueFiles:
           - $values_repo/charts/feedthebees-blog/values.yaml

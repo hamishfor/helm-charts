@@ -13,9 +13,9 @@ spec:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
-    - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: 0.1.0
-      chart: local-path-provisioner
+    - repoURL: {{ .Values.spec.chartsSource.repoURL }}
+      targetRevision: {{ .Values.spec.chartsSource.targetRevision }}
+      path: charts/local-path-provisioner
       helm:
         valueFiles:
           - $values_repo/charts/local-path-provisioner/values.yaml

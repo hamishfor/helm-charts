@@ -11,5 +11,3 @@ charts/*/charts/*
 *.cr-release-packages/
 *.cr-release-packages
 *CHANGELOG.md
-*cr.yaml
-*release.config.cjs

@@ -13,9 +13,9 @@ spec:
     - repoURL: {{ .Values.spec.source.repoURL }}
       targetRevision: {{ .Values.spec.source.targetRevision }}
       ref: {{ .Values.spec.source.ref }}
-    - repoURL: https://hamishfor.github.io/helm-charts
-      targetRevision: "5.4.7"
-      chart: deluge
+    - repoURL: {{ .Values.spec.chartsSource.repoURL }}
+      targetRevision: {{ .Values.spec.chartsSource.targetRevision }}
+      path: charts/deluge
       helm:
         valueFiles:
           - $values_repo/charts/deluge/values.yaml

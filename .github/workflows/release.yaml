@@ -3,17 +3,74 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+# How publishing works:
+#   The Helm repo at https://hamishfor.github.io/helm-charts is just the
+#   gh-pages branch (index.yaml + one .tgz per chart version), served by
+#   GitHub Pages. This job packages any chart whose `name-version.tgz` is not
+#   already on gh-pages, merges it into index.yaml and pushes. A version that
+#   is already published is never rebuilt, so changing a chart without
+#   bumping `version` in Chart.yaml publishes nothing.
 jobs:
   release:
     permissions:
       contents: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+      - name: Checkout main
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
         with:
-          fetch-depth: 0
-      - name: Publish Helm charts
-        uses: stefanprodan/helm-gh-pages@v1.7.0
-        with:
+          ref: gh-pages
+          path: .gh-pages
           token: ${{ secrets.CR_TOKEN_2 }}
+
+      - name: Install Helm
+        uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
+        with:
+          version: v3.14.3 # renovate: datasource=github-releases depName=helm packageName=helm/helm
+
+      - name: Package new chart versions
+        id: package
+        run: |
+          set -euo pipefail
+          mkdir -p .packages
+          published=()
+          for chart in charts/*/; do
+            [ -f "$chart/Chart.yaml" ] || continue
+            name=$(yq '.name' "$chart/Chart.yaml")
+            version=$(yq '.version' "$chart/Chart.yaml")
+            if [ -f ".gh-pages/$name-$version.tgz" ]; then
+              echo "skip  $name-$version (already published)"
+              continue
+            fi
+            echo "build $name-$version"
+            helm dependency build "$chart"
+            helm package "$chart" --destination .packages
+            published+=("$name-$version")
+          done
+          echo "published=${published[*]}" >> "$GITHUB_OUTPUT"
+
+      - name: Update index and push gh-pages
+        if: steps.package.outputs.published != ''
+        run: |
+          set -euo pipefail
+          # Index only the new packages, merged into the existing index, so
+          # entries for already-published versions are left untouched.
+          helm repo index .packages \
+            --url https://hamishfor.github.io/helm-charts \
+            --merge .gh-pages/index.yaml
+          cp .packages/*.tgz .packages/index.yaml .gh-pages/
+          cd .gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Publish ${{ steps.package.outputs.published }}"
+          git push
