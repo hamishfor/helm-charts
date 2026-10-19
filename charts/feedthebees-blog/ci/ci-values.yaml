@@ -1,0 +1,15 @@
+# ct install runs this against kind; nginx:alpine stands in for the private
+# blog image and serves on 8080 like nginx-unprivileged does.
+image:
+  repository: nginxinc/nginx-unprivileged
+  tag: 1.29-alpine
+replicaCount: 1
+ingress:
+  enabled: true
+  hosts:
+    - host: blog.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+probes:
+  path: /
