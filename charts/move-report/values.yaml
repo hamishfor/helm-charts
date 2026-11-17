@@ -1,0 +1,104 @@
+# Default values for move-in-report.
+
+# -- Number of replicas; the app keeps no state so this can be scaled freely
+replicaCount: 2
+
+image:
+  # -- Image repository, built by the move-report-generator repo's release workflow
+  repository: ghcr.io/hamishfor/move-report-generator
+  # -- Image tag, defaults to the chart appVersion. Use the short commit sha of a build
+  tag: ""
+  # -- Image pull policy
+  pullPolicy: IfNotPresent
+
+# -- Image pull secrets, needed if the ghcr.io package is private
+imagePullSecrets: []
+
+# -- Override the chart name
+nameOverride: ""
+# -- Override the full resource name
+fullnameOverride: ""
+
+# -- Annotations to add to the pod
+podAnnotations: {}
+
+# -- Pod security context
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  runAsGroup: 1000
+  fsGroup: 1000
+  seccompProfile:
+    type: RuntimeDefault
+
+# -- Container security context
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  capabilities:
+    drop:
+      - ALL
+
+# -- Port the app listens on inside the container
+containerPort: 8000
+
+openrouter:
+  # -- Name of an existing secret holding the OpenRouter API key. Leave empty to run without AI descriptions
+  existingSecret: ""
+  # -- Key in the secret that holds the API key
+  secretKey: api-key
+  # -- Comma-separated OpenRouter model ids to try in order. Empty uses the app's built-in free vision models
+  models: ""
+
+service:
+  # -- Service type
+  type: ClusterIP
+  # -- Service port
+  port: 80
+
+ingress:
+  # -- Enable the ingress
+  enabled: false
+  # -- Ingress class name
+  className: nginx
+  # -- Ingress annotations
+  annotations: {}
+  # -- Ingress hosts
+  hosts:
+    - host: report.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  # -- Ingress TLS configuration
+  tls: []
+
+probes:
+  # -- HTTP path for the liveness and readiness probes
+  path: /healthz
+
+# -- Container resources
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    # building a PDF with ~100 photos holds them all in memory
+    memory: 768Mi
+
+podDisruptionBudget:
+  # -- Create a PodDisruptionBudget
+  enabled: true
+  # -- Minimum available pods
+  minAvailable: 1
+
+# -- Node selector
+nodeSelector: {}
+
+# -- Tolerations
+tolerations: []
+
+# -- Affinity
+affinity: {}
+
+# -- Topology spread constraints, defaults to spreading replicas across nodes
+topologySpreadConstraints: []

@@ -1,0 +1,16 @@
+# ct install runs this against kind; nginx-unprivileged stands in for the private
+# app image, so point the container port and probes at what nginx serves.
+image:
+  repository: nginxinc/nginx-unprivileged
+  tag: 1.29-alpine
+replicaCount: 1
+containerPort: 8080
+ingress:
+  enabled: true
+  hosts:
+    - host: report.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+probes:
+  path: /
