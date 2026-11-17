@@ -5,5 +5,5 @@ The report generator is available at:
 {{- end }}
 {{- else }}
 Port-forward to use it:
-  kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "move-in-report.fullname" . }} 8080:{{ .Values.service.port }}
+  kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "move-report.fullname" . }} 8080:{{ .Values.service.port }}
 {{- end }}

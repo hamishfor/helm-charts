@@ -1,5 +1,5 @@
 apiVersion: v2
-name: move-in-report
+name: move-report
 description: Web app that turns room photos into a move-in / move-out condition report PDF, with AI-drafted descriptions
 type: application
 version: 0.1.0
@@ -8,7 +8,7 @@ kubeVersion: ">=1.19.0-0"
 keywords:
   - pdf
   - property
-home: https://github.com/hamishfor/helm-charts/tree/main/charts/move-in-report
+home: https://github.com/hamishfor/helm-charts/tree/main/charts/move-report
 sources:
   - https://github.com/hamishfor/move-report-generator
 maintainers:

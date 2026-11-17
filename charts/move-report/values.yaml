@@ -1,4 +1,4 @@
-# Default values for move-in-report.
+# Default values for move-report.
 
 # -- Number of replicas; the app keeps no state so this can be scaled freely
 replicaCount: 2

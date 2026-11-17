@@ -1,10 +1,10 @@
-# move-in-report
+# move-report
 
 ![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
 
 Web app that turns room photos into a move-in / move-out condition report PDF, with AI-drafted descriptions
 
-**Homepage:** <https://github.com/hamishfor/helm-charts/tree/main/charts/move-in-report>
+**Homepage:** <https://github.com/hamishfor/helm-charts/tree/main/charts/move-report>
 
 ## Maintainers
 

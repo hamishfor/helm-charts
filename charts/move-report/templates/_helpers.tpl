@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "move-in-report.name" -}}
+{{- define "move-report.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "move-in-report.fullname" -}}
+{{- define "move-report.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "move-in-report.chart" -}}
+{{- define "move-report.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "move-in-report.labels" -}}
-helm.sh/chart: {{ include "move-in-report.chart" . }}
-{{ include "move-in-report.selectorLabels" . }}
+{{- define "move-report.labels" -}}
+helm.sh/chart: {{ include "move-report.chart" . }}
+{{ include "move-report.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,7 +45,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "move-in-report.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "move-in-report.name" . }}
+{{- define "move-report.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "move-report.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
