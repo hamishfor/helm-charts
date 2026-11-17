@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: move-in-report
+  name: move-report
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: move-in-report
+    namespace: move-report
     server: {{ .Values.spec.destination.server }}
   sources:
     - repoURL: {{ .Values.spec.source.repoURL }}
